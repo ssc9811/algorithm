@@ -1,7 +1,5 @@
-const arr = [1, 2, 3, 4, 5]
+const number = 12345;
 
-function solution(arr) {
-  return arr.reduce((acc, cur) => acc + cur, 0)
-}
+const result = number.toString().split('').reverse().map(result => +result);
 
-console.log(solution(arr) / arr.length);
+console.log(result)
