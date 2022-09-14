@@ -1,5 +1,13 @@
-const number = 12345;
 
-const result = number.toString().split('').reverse().map(result => +result);
+// 118372	873211
+const number = 118372;
 
-console.log(result)
+
+
+console.log(+(number.toString()
+  .split("")
+  .sort((a, b) => b - a)
+  .join('')
+)
+)
+
