@@ -1,19 +1,6 @@
-const s = 'ppoyoydpy';
+const a1 = 10
+const a2 = 12
+const a3 = 11
 
-const arr = s.toUpperCase().split('');
-const pArr = arr.filter(s => s === 'P')
-const yArr = arr.filter(s => s === 'Y')
 
-if (pArr.length === yArr.length) {
-  console.log(true);
-} else {
-  console.log(false);
-}
-
-function numPY(s) {
-  console.log(
-    s.toUpperCase().split("P").length === s.toUpperCase().split("Y").length
-  );
-}
-
-numPY(s)
+return (a1 % (a1.toString().split('').reduce((prv, cur) => prv += +cur, 0))) === 0
