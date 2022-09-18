@@ -14,3 +14,5 @@
 - [문자열 내 p와 y의 개수](./level_1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%B4%20p%EC%99%80%20y%EC%9D%98%20%EA%B0%9C%EC%88%98.md)
 - [하샤드 수](./level_1/%ED%95%98%EC%83%A4%EB%93%9C%20%EC%88%98.md)
 - [나머지가 1이 되는 수 찾기](./level_1/%EB%82%98%EB%A8%B8%EC%A7%80%EA%B0%80%201%EC%9D%B4%20%EB%90%98%EB%8A%94%20%EC%88%98%20%EC%B0%BE%EA%B8%B0.md)
+- [문자열을 정수로 바꾸기](./level_1//%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84%20%EC%A0%95%EC%88%98%EB%A1%9C%20%EB%B0%94%EA%BE%B8%EA%B8%B0.md)
+- [x만큼 간격이 있는 n개의 숫자](./level_1//x%EB%A7%8C%ED%81%BC%20%EA%B0%84%EA%B2%A9%EC%9D%B4%20%EC%9E%88%EB%8A%94%20n%EA%B0%9C%EC%9D%98%20%EC%88%AB%EC%9E%90.md)
