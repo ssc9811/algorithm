@@ -16,7 +16,6 @@ const solution = (num) => {
     else if (result === 1) {
       return i
     }
-    console.log('i', i, 'result', result)
   }
 }
 solution(num1);
