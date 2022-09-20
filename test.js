@@ -1,21 +1,14 @@
-const num1 = 6;
-const num2 = 16;
-const num3 = 626331;
+const a = 5
+const b = 3
 
-let count = 500;
-
-const solution = (num) => {
-  let result = num;
-  for (let i = 0; i <= 500; i++) {
-    if (result % 2 === 0) {
-      result = result / 2
-    }
-    else if (result % 2 === 1 && result > 1) {
-      result = (result * 3) + 1
-    }
-    else if (result === 1) {
-      return i
-    }
-  }
-}
-solution(num1);
+// let va = a < b ? a : b
+// let vb = a < b ? b : a
+const min = Math.min(a, b)
+const max = Math.max(a, b)
+// let sum = 0;
+// console.log(va, vb)
+// for (let i = va; i <= vb; i++) {
+//   sum += i
+// }
+// console.log(sum)
+console.log(min, max)
