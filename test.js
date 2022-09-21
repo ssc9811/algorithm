@@ -1,14 +1,12 @@
-const a = 5
-const b = 3
+// | "01033334444" | "**\*\*\***4444" |
+const phoneNum = "01033334444"
 
-// let va = a < b ? a : b
-// let vb = a < b ? b : a
-const min = Math.min(a, b)
-const max = Math.max(a, b)
-// let sum = 0;
-// console.log(va, vb)
-// for (let i = va; i <= vb; i++) {
-//   sum += i
-// }
-// console.log(sum)
-console.log(min, max)
+console.log(phoneNum.slice(-4))
+console.log(phoneNum.slice(0, -4).replace(/[0-9]/gi, '*'))
+
+function hide_numbers(s) {
+  var result = "*".repeat(s.length - 4) + s.slice(-4);
+  //함수를 완성해주세요
+
+  return result;
+}
