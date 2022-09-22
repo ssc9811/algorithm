@@ -1,12 +1,6 @@
-// | "01033334444" | "**\*\*\***4444" |
-const phoneNum = "01033334444"
+const arr = [2, 36, 1, 3]
+const divisor = 1
 
-console.log(phoneNum.slice(-4))
-console.log(phoneNum.slice(0, -4).replace(/[0-9]/gi, '*'))
+const newArr = arr.filter(x => x % divisor === 0 && x).sort((a, b) => a - b)
 
-function hide_numbers(s) {
-  var result = "*".repeat(s.length - 4) + s.slice(-4);
-  //함수를 완성해주세요
-
-  return result;
-}
+console.log(newArr)
