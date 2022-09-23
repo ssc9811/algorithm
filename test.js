@@ -1,6 +1,5 @@
-const arr = [2, 36, 1, 3]
-const divisor = 1
+const arr = [4, 3, 2, 1]
 
-const newArr = arr.filter(x => x % divisor === 0 && x).sort((a, b) => a - b)
+console.log()
 
-console.log(newArr)
+console.log(arr.filter(value => value !== Math.min(...arr)))
