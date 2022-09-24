@@ -1,5 +1,8 @@
-const arr = [4, 3, 2, 1]
+const absolutes = [4, 7, 12]
+const signs = [true, false, true]
+let result = 0
+absolutes.map((absolute, idx) => {
+  result += signs[idx] ? absolute : -absolute
+})
 
-console.log()
-
-console.log(arr.filter(value => value !== Math.min(...arr)))
+console.log(result)
