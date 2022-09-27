@@ -1,3 +1,7 @@
+## 1단계 문제
+
+### 1-1 짝수와 홀수
+
 ![스크린샷 2022-09-27 오후 7 23 27](https://user-images.githubusercontent.com/39263149/192501641-58739397-f946-417c-9322-5b22c19acf3b.png)
 
 ```javascript
@@ -23,4 +27,14 @@ function evenOrOdd(num) {
 이유는 공통적으로 여러 프로그래밍 언어에서, 'False = 0' 이고 'True = 1' 혹은 0 이 아닌 경우를 사용하기 때문이다.
 
 홀수 값은 1이 나오므로 true, 짝수는 0이므로 false
+```
+
+### 1-2 평균 구하기
+
+![스크린샷 2022-09-27 오후 7 23 44](https://user-images.githubusercontent.com/39263149/192501647-f080c573-7e5d-4ee1-877a-d603d7d6ca33.png)
+
+```javascript
+function solution(arr) {
+  return arr.reduce((arr, cur) => arr + cur, 0) / arr.length;
+}
 ```
