@@ -67,6 +67,12 @@ function solution(n) {
 }
 ```
 
+<br>
+
+## 1-4 자릿수 더하기
+
+<br>
+
 ![스크린샷 2022-09-27 오후 7 28 45](https://user-images.githubusercontent.com/39263149/192503559-59714661-0420-4669-928b-d24b17114445.png)
 
 ```javascript
@@ -78,12 +84,6 @@ function solution(n) {
   return answer;
 }
 ```
-
-<br>
-
-## 1-4 자릿수 더하기
-
-<br>
 
 ### 다른 사람의 풀이
 
