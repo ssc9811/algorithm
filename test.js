@@ -1,10 +1,12 @@
-const a = [1, 2, 3, 4]
-const b = [-3, -1, 0, 2]
+const s1 = "1 2 3 4";
+const s2 = "-1 -2 -3 -4";
 
 
-const t = a.reduce((acc, _, idx) => {
-  acc += a[idx] * b[idx]
-    , 0
-})
 
+const min = Math.min(...s2.split(' ').map(value => +value))
+const max = Math.max(...s2.split(' ').map(value => +value))
 
+const arr = s1.split(' ');
+console.log(Math.max(...arr))
+
+return `${min} ${max}`
