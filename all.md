@@ -610,3 +610,53 @@ function solution(numbers) {
     .reduce((pre, cur) => (pre += cur));
 }
 ```
+
+<br>
+
+## 1-23 내적
+
+<br>
+
+![스크린샷 2022-09-28 오후 6 02 10](https://user-images.githubusercontent.com/39263149/192737493-b038a24e-0d43-4cd3-9a60-ba050398cefd.png)
+
+```javascript
+function solution(a, b) {
+  return a.reduce((acc, _, idx) => (acc += a[idx] * b[idx]), 0);
+}
+```
+
+# 2단계 문제
+
+<br>
+
+## 2-1 최대값과 최솟값
+
+<br>
+
+![스크린샷 2022-09-29 오후 4 20 26](https://user-images.githubusercontent.com/39263149/192966073-7afc0d47-3f81-4a9a-86a0-30d0bb48d2d0.png)
+
+```javascript
+function solution(s) {
+  const min = Math.min(...s.split(" ").map((value) => +value));
+  const max = Math.max(...s.split(" ").map((value) => +value));
+
+  return `${min} ${max}`;
+}
+```
+
+### 다른 사람의 풀이
+
+```javascript
+function solution(s) {
+  const arr = s.split(" ");
+
+  return Math.min(...arr) + " " + Math.max(...arr);
+}
+```
+
+### 배운 내용
+
+```
+Math.max(), Math.min()이 문자열도 비교 가능하다는 사실을 알았다.
+형 변환을 할 필요가 없는 문제였다.
+```

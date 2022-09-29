@@ -16,4 +16,6 @@
 
 ### [전체보기](./all.md)
 
-### [Level 1](./level_1/index.md)
+### [Level 1](./level_1/level_1.md)
+
+### [Level 2](./level_2/level_2.md)
