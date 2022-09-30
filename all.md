@@ -625,6 +625,23 @@ function solution(a, b) {
 }
 ```
 
+<br>
+
+## 1-24 문자열 내림차순으로 배치하기
+
+<br>
+
+![스크린샷 2022-09-30 오전 9 40 48](https://user-images.githubusercontent.com/39263149/193165868-34d81259-5e42-45b8-8cf4-1bb24fef1a9c.png)
+
+```javascript
+function solution(s) {
+  return s.split("").sort().reverse().join("");
+}
+```
+
+<br>
+<br>
+
 # 2단계 문제
 
 <br>
