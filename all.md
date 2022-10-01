@@ -666,6 +666,58 @@ function solution(s) {
 ```
 
 <br>
+
+## 1-26 약수의 개수와 덧셈
+
+<br>
+
+![스크린샷 2022-10-01 오후 10 20 01](https://user-images.githubusercontent.com/39263149/193411486-2b54ad88-d0eb-4822-8d35-1bfafaed06bf.png)
+
+```javascript
+function solution(left, right) {
+  let sum = 0;
+  for (let i = left; i <= right; i++) {
+    let list = [];
+    for (let j = 1; j <= i; j++) {
+      i % j === 0 && list.push(j);
+    }
+    list.length % 2 === 0 ? (sum += i) : (sum -= i);
+  }
+  return sum;
+}
+```
+
+### 다른 사람 풀이
+
+```javascript
+function solution(left, right) {
+  var answer = 0;
+  for (let i = left; i <= right; i++) {
+    if (Number.isInteger(Math.sqrt(i))) {
+      answer -= i;
+    } else {
+      answer += i;
+    }
+  }
+  return answer;
+}
+```
+
+### 배운 내용
+
+```
+제곱근이 정수면 약수의 개수가 홀수다!!!
+
+Math.sqrt(number) number의 제곱근을 구한다,
+Number.isInteger() 그 값이 정수인지 아닌지 판별한다.
+number의 제곱근이 정수라면 약수의 갯수가 홀수이다. 반대로
+소수라면 약수의 갯수가 짝수이다.
+
+나의 코드는 o^2 이므로 속도에서 배로 차이날 것이다.
+하지만 한번에 해결했음에 알고리즘 실력이 점점 향상되고 있는게 느껴져서 좋다.
+```
+
+<br>
 <br>
 
 # 2단계 문제
