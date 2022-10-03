@@ -718,6 +718,22 @@ number의 제곱근이 정수라면 약수의 갯수가 홀수이다. 반대로
 ```
 
 <br>
+
+## 1-27 행렬의 덧셈
+
+<br>
+
+![스크린샷 2022-10-03 오후 9 39 52](https://user-images.githubusercontent.com/39263149/193578758-f4e63f8b-4696-4a9b-b83a-d820d75286a9.png)
+
+```javascript
+function solution(arr1, arr2) {
+  return arr1.map((arr, idx1) =>
+    arr.map((value, idx2) => value + arr2[idx1][idx2])
+  );
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
