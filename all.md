@@ -734,6 +734,24 @@ function solution(arr1, arr2) {
 ```
 
 <br>
+
+## 1-28 부족한 금액 계산하기
+
+<br>
+
+![스크린샷 2022-10-04 오후 3 46 19](https://user-images.githubusercontent.com/39263149/193752291-8625eef8-4479-4d3d-a7ef-bc3664cd56a3.png)
+
+```javascript
+function solution(price, money, count) {
+  let sum = 0;
+  for (let i = 1; i <= count; i++) {
+    sum += price * i;
+  }
+  return sum > money ? sum - money : 0;
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제

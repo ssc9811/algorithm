@@ -1,3 +1,14 @@
-const arr1 = [[1, 2], [2, 3]]
-const arr2 = [[3, 4], [5, 6]]
+const price = 3
+const money = 20
+const count = 4
 
+
+function solution(price, money, count) {
+  let sum = 0
+  for (let i = 1; i <= count; i++) {
+    sum += price * i
+  }
+  return money - sum
+}
+
+solution(price, money, count)
