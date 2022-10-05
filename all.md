@@ -752,6 +752,51 @@ function solution(price, money, count) {
 ```
 
 <br>
+
+## 1-29 직사각형 별찍기
+
+<br>
+
+![스크린샷 2022-10-05 오후 6 08 41](https://user-images.githubusercontent.com/39263149/194024280-9d71be29-2c5f-4e8f-8448-10ae6fd2e035.png)
+
+```javascript
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (data) => {
+  const n = data.split(" ");
+  const a = Number(n[0]),
+    b = Number(n[1]);
+  for (let i = 0; i < b; i++) {
+    for (let j = 0; j < a; j++) {
+      process.stdout.write("*");
+    }
+    process.stdout.write("\n");
+  }
+});
+```
+
+### 다른 사람 풀이
+
+```javascript
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (data) => {
+  const n = data.split(" ");
+  const a = Number(n[0]);
+  const b = Number(n[1]);
+
+  console.log(`${"*".repeat(a)} \n`.repeat(b));
+});
+```
+
+### 배운 내용
+
+```
+당연하게도 이중 for문을 먼저 떠올렸고, repeat() 메소드는 생각조차 못했다.
+학생때 경험으로 생각이 좁혀져 있었던 것 같다.
+
+string.repeat( count ) 의 형태로 쓰이고, 문자열을 반복한 값을 반환하는 메서드이다.
+```
+
+<br>
 <br>
 
 # 2단계 문제

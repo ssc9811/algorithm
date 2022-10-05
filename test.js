@@ -1,14 +1,12 @@
-const price = 3
-const money = 20
-const count = 4
-
-
-function solution(price, money, count) {
-  let sum = 0
-  for (let i = 1; i <= count; i++) {
-    sum += price * i
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (data) => {
+  const n = data.split(" ");
+  const a = Number(n[0]),
+    b = Number(n[1]);
+  for (let i = 0; i < b; i++) {
+    for (let j = 0; j < a; j++) {
+      process.stdout.write("*");
+    }
+    process.stdout.write("\n");
   }
-  return money - sum
-}
-
-solution(price, money, count)
+});

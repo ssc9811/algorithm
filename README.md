@@ -11,6 +11,7 @@
 - 의미있는 변수명 지정
 - 배열의 고차함수를 적극적으로 사용하며, 메모리의 사용을 최소화
 - 문제 설명과 제한 조건이 기록된 이미지 파일을 첨부하고, 코드 또한 README.md 파일에 기록
+- 문제가 너무 쉽게 풀린 경우, 다른 방법을 생각해본다. (2022-10-05 추가)
 
 ## [프로그래머스](https://programmers.co.kr/?utm_source=google&utm_medium=cpc&utm_campaign=brand_prgms_pc&gclid=Cj0KCQjwpeaYBhDXARIsAEzItbGapElwZebk0CA8nNp5yaJU3OjNZfCvWxkXNWBjPc-EpPqajXBxxvEaAm_gEALw_wcB)
 
