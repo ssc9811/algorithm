@@ -826,6 +826,20 @@ if(n < m) 인 경우에, n % m = r 로 표현할 수 있다.
 ```
 
 <br>
+
+## 1-31 같은 숫자는 싫어
+
+<br>
+
+![스크린샷 2022-10-07 오후 5 43 46](https://user-images.githubusercontent.com/39263149/194512341-3ac5ed49-128f-41e0-aef9-b64aec33c2a5.png)
+
+```javascript
+function solution(arr) {
+  return arr.filter((value, idx) => value != arr[idx + 1]);
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
