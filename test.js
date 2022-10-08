@@ -1,5 +1,17 @@
-const arr1 = [1, 1, 3, 3, 0, 1, 1];
-// const arr1 = [4, 4, 4, 3, 3];
+const s = "try hello world";
 
-const result = arr.filter((value, idx) => value != arr[idx + 1]);
-console.log(result);
+function solution(s) {
+  return s
+    .split(" ")
+    .map((word) =>
+      word
+        .split("")
+        .map((char, idx) =>
+          idx % 2 !== 0 ? word[idx].toLowerCase() : word[idx].toUpperCase()
+        )
+        .join("")
+    )
+    .join(" ");
+}
+
+solution(s);

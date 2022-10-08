@@ -840,6 +840,41 @@ function solution(arr) {
 ```
 
 <br>
+
+## 1-32 이상한 문자 만들기
+
+<br>
+
+![스크린샷 2022-10-08 오후 1 35 58](https://user-images.githubusercontent.com/39263149/194688486-0657bfce-84e2-483b-bcbf-f8cb1ac3c94e.png)
+
+```javascript
+function solution(s) {
+  return s
+    .split(" ")
+    .map((word) =>
+      word
+        .split("")
+        .map((char, idx) =>
+          idx % 2 !== 0 ? word[idx].toLowerCase() : word[idx].toUpperCase()
+        )
+        .join("")
+    )
+    .join(" ");
+}
+```
+
+### 배운 내용
+
+```
+map을 처음 돌린 후 나온 값이 배열이 아닌 문자라서 for문을 돌리려고 했다. => for(let i=0; i<word.length;i++) {...}
+word 값에 split() 을 한번 더 사용해서 배열의 고차함수를 이용했다.
+
+나뉜 문자는 다시 join() 을 통해 묶어줬다.
+
+=> split(), join() 을 바로 떠올리지 못한게 아쉽다..
+```
+
+<br>
 <br>
 
 # 2단계 문제
