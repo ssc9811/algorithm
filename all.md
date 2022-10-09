@@ -875,6 +875,20 @@ word 값에 split() 을 한번 더 사용해서 배열의 고차함수를 이용
 ```
 
 <br>
+
+## 1-33 3진법 뒤집기
+
+<br>
+
+![스크린샷 2022-10-09 오후 11 29 32](https://user-images.githubusercontent.com/39263149/194762465-fb747b3d-dfae-4567-b956-fb2070248002.png)
+
+```javascript
+function solution(n) {
+  return parseInt(n.toString(3).split("").reverse().join(""), 3);
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제

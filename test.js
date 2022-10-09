@@ -1,17 +1,5 @@
-const s = "try hello world";
+const n = 45;
 
-function solution(s) {
-  return s
-    .split(" ")
-    .map((word) =>
-      word
-        .split("")
-        .map((char, idx) =>
-          idx % 2 !== 0 ? word[idx].toLowerCase() : word[idx].toUpperCase()
-        )
-        .join("")
-    )
-    .join(" ");
-}
+const answer = n.toString(3).split("").reverse().join("");
 
-solution(s);
+console.log(parseInt(answer, 3));
