@@ -889,6 +889,41 @@ function solution(n) {
 ```
 
 <br>
+
+## 1-34 예산
+
+<br>
+
+![스크린샷 2022-10-10 오후 2 03 15](https://user-images.githubusercontent.com/39263149/194801744-5ee27f96-4508-4153-acea-a2e681925ccf.png)
+
+```javascript
+function solution(d, budget) {
+  let sum = 0;
+  const answer = d
+    .sort((a, b) => a - b)
+    .filter((list, idx) => {
+      sum += list;
+      if (sum <= budget) {
+        return list;
+      }
+    });
+  return answer.length;
+}
+```
+
+### 다른 사람 풀이 (1)
+
+```javascript
+function solution(d, budget) {
+  return d
+    .sort((a, b) => a - b)
+    .reduce((count, price) => {
+      return count + ((budget -= price) >= 0);
+    }, 0);
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
