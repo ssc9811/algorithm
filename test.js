@@ -1,40 +1,50 @@
-const d = [1, 3, 2, 5, 4];
-const budget = 9;
-// result = 3
+const s = "VWXYZ";
+const n = 2;
 
-// function solution(d, budget) {
-//   d.reduce((pre, cur) => {
-//     pre += cur;
-//     console.log("sum", pre);
-//     if (pre <= budget) {
-//       // console.log(cur);
-//       return cur;
-//     }
-//   }, 0);
-// }
+// const s1 = "a";
 
-// function solution(d, budget) {
-//   let sum = 0;
-//   const answer = d
-//     .sort((a, b) => a - b)
-//     .filter((list, idx) => {
-//       sum += list;
-//       if (sum <= budget) {
-//         return list;
-//       }
-//     });
-//   return answer.length;
-// }
-
-var solution = (d, budget) => {
-  console.log(
-    d
-      .sort((a, b) => a - b)
-      .reduce((count, price) => {
-        // return count + ((budget -= price) >= 0);
-        return (count += (budget -= price) >= 0);
-      }, 0)
-  );
+const toUnicode = (char, n) => {
+  if (char === " ") {
+    return " ";
+  } else if (char === "z") {
+    return 97 + n - 1;
+  } else if (char === "Z") {
+    return 65 + n - 1;
+  } else {
+    return char.charCodeAt(0) + n;
+  }
 };
 
-solution(d, budget);
+// function solution(s, n) {
+//   console.log(
+//     `${s
+//       .split("")
+//       .map((char) => String.fromCharCode(toUnicode(char, n)))
+//       .join(" ")}`
+//   );
+// }
+
+function solution(s, n) {
+  return s
+    .split("")
+    .map((char) => {
+      if (char === "") return " ";
+      const unicode = char.charCodeAt(0);
+      if ((unicode + n > 90 && unicode <= 90) || unicode + n > 122) {
+        return String.fromCharCode(unicode + n - 26);
+      } else {
+        return String.fromCharCode(unicode + n);
+      }
+    })
+    .join("");
+}
+
+solution(s, n);
+
+console.log("A", "A".charCodeAt(0));
+console.log("Z", "Z".charCodeAt(0));
+console.log("a", "a".charCodeAt(0));
+console.log("z", "z".charCodeAt(0));
+console.log(" ", " ".charCodeAt(0));
+
+// console.log(String.fromCharCode(90));
