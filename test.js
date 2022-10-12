@@ -1,50 +1,58 @@
-const s = "VWXYZ";
-const n = 2;
+const n = 5;
+const arr1 = [9, 20, 28, 18, 11];
+const arr2 = [30, 1, 21, 17, 28];
 
-// const s1 = "a";
+// function solution(n, arr1, arr2) {
+//   const newArr1 = arr1.map((value) => value.toString(2).padStart(n, "0"));
+//   const newArr2 = arr2.map((value) => value.toString(2).padStart(n, "0"));
 
-const toUnicode = (char, n) => {
-  if (char === " ") {
-    return " ";
-  } else if (char === "z") {
-    return 97 + n - 1;
-  } else if (char === "Z") {
-    return 65 + n - 1;
-  } else {
-    return char.charCodeAt(0) + n;
-  }
-};
-
-// function solution(s, n) {
-//   console.log(
-//     `${s
-//       .split("")
-//       .map((char) => String.fromCharCode(toUnicode(char, n)))
-//       .join(" ")}`
-//   );
+//   let answer = [];
+//   for (let i = 0; i < newArr1.length; i++) {
+//     let totalArr = [];
+//     for (let j = 0; j < newArr2.length; j++) {
+//       if (newArr1[i][j] === "0" && newArr2[i][j] === "0") {
+//         totalArr.push("0");
+//       } else {
+//         totalArr.push("1");
+//       }
+//     }
+//     answer.push(totalArr.join(""));
+//   }
+//   return answer.map((value) => value.replaceAll("1", "#").replaceAll("0", " "));
 // }
 
-function solution(s, n) {
-  return s
-    .split("")
-    .map((char) => {
-      if (char === "") return " ";
-      const unicode = char.charCodeAt(0);
-      if ((unicode + n > 90 && unicode <= 90) || unicode + n > 122) {
-        return String.fromCharCode(unicode + n - 26);
-      } else {
-        return String.fromCharCode(unicode + n);
-      }
-    })
-    .join("");
-}
+var solution = (n, a, b) => {
+  console.log(
+    "a",
+    a.map((x) => x.toString(2).padStart(n, 0))
+  );
+  console.log(
+    "b",
+    b.map((x) => x.toString(2).padStart(n, 0))
+  );
+  console.log(
+    a.map((a, i) =>
+      (a | b[i])
+        .toString(2)
+        .padStart(n, 0)
+        .replaceAll("0", " ")
+        .replaceAll("1", "#")
+    )
+  );
+};
 
-solution(s, n);
+var solution = (n, a, b) =>
+  a.map((a, i) =>
+    (a | b[i])
+      .toString(2)
+      .padStart(n, 0)
+      .replaceAll("0", " ")
+      .replaceAll("1", "#")
+  );
 
-console.log("A", "A".charCodeAt(0));
-console.log("Z", "Z".charCodeAt(0));
-console.log("a", "a".charCodeAt(0));
-console.log("z", "z".charCodeAt(0));
-console.log(" ", " ".charCodeAt(0));
+solution(n, arr1, arr2);
 
-// console.log(String.fromCharCode(90));
+// console.log(x.toString(2).padStart(n, "0"));
+
+// .replaceAll("1", "#").replaceAll("0", " ")
+// .replaceAll("1", "#").replaceAll("0", " ")
