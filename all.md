@@ -1027,6 +1027,27 @@ var solution = (n, a, b) =>
 ```
 
 <br>
+
+## 1-37 최소직사각형
+
+<br>
+
+![스크린샷 2022-10-13 오후 5 29 14](https://user-images.githubusercontent.com/39263149/195544508-b122f12e-9350-4b3c-8a11-43eaa1913aec.png)
+
+```javascript
+function solution(sizes) {
+  let width = 0;
+  let height = 0;
+  sizes.forEach((size) => {
+    const [a, b] = size.sort((a, b) => b - a);
+    if (a > width) width = a;
+    if (b > height) height = b;
+  });
+  return width * height;
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
