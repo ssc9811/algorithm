@@ -1,20 +1,14 @@
-const sizes = [
-  [10, 7],
-  [12, 3],
-  [8, 15],
-  [14, 7],
-  [5, 15],
-];
+// const strings = ["abce", "abcd", "cdx"];
+const strings = ["sun", "bed", "car"];
 
-function solution(sizes) {
-  let width = 0;
-  let height = 0;
-  sizes.forEach((size) => {
-    const [a, b] = size.sort((a, b) => b - a);
-    if (a > width) width = a;
-    if (b > height) height = b;
+const n = 1;
+
+function solution(strings, n) {
+  return strings.sort((a, b) => {
+    if (a[n] > b[n]) return 1;
+    else if (a[n] === b[n]) return a > b ? 1 : -1;
+    else return -1;
   });
-  return width * height;
 }
 
-solution(sizes);
+solution(strings, n);

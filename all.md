@@ -1048,6 +1048,24 @@ function solution(sizes) {
 ```
 
 <br>
+
+## 1-38 문자열 내 마음대로 정렬하기
+
+<br>
+
+![스크린샷 2022-10-14 오후 5 54 36](https://user-images.githubusercontent.com/39263149/195806038-9dd1153c-757a-4116-8f35-8e0368e7b824.png)
+
+```javascript
+function solution(strings, n) {
+  return strings.sort((a, b) => {
+    if (a[n] > b[n]) return 1;
+    else if (a[n] === b[n]) return a > b ? 1 : -1;
+    else return -1;
+  });
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
