@@ -1,14 +1,37 @@
-// const strings = ["abce", "abcd", "cdx"];
-const strings = ["sun", "bed", "car"];
+const s = "one4seveneight";
 
-const n = 1;
+function solution(s) {
+  let numbers = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
 
-function solution(strings, n) {
-  return strings.sort((a, b) => {
-    if (a[n] > b[n]) return 1;
-    else if (a[n] === b[n]) return a > b ? 1 : -1;
-    else return -1;
-  });
+  numbers.map((number, i) => (s = s.split(number).join(i)));
+  return Number(s);
 }
+solution(s);
 
-solution(strings, n);
+// function solution(s) {
+//   s = s.match(/zero|one|two|three|four|five|six|seven|eight|nine+|[0-9]/g);
+//   const obj = {
+//     zero: 0,
+//     one: 1,
+//     two: 2,
+//     three: 3,
+//     four: 4,
+//     five: 5,
+//     six: 6,
+//     seven: 7,
+//     eight: 8,
+//     nine: 9,
+//   };
+//   return Number(s.map((x) => (obj[x] === undefined ? x : obj[x])).join(""));
+// }
