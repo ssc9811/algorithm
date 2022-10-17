@@ -1136,6 +1136,39 @@ function solution(s) {
 ```
 
 <br>
+
+## 1-41 두 개 뽑아서 더하기
+
+<br>
+
+![스크린샷 2022-10-17 오후 3 42 25](https://user-images.githubusercontent.com/39263149/196106729-f4e33133-c7e7-4a15-8895-a8a6353837ea.png)
+
+```javascript
+function solution(numbers) {
+  let sum = [];
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    for (let j = i + 1; j <= numbers.length - 1; j++) {
+      sum.push(numbers[i] + numbers[j]);
+    }
+  }
+  return sum
+    .filter((element, i) => sum.indexOf(element) === i)
+    .sort((a, b) => a - b);
+}
+```
+
+### 배운 내용
+
+```
+배열 내 중복값 제거하는 방법
+array.filter((element,index) => array.indexOf(element) === i)
+
+기존 배열 array 메소드에 indexOf()를 사용해서 배열 내의 값을 넣는다 (element)
+동일한 값이 있다면 동일한 index 값이 나온다
+따라서 그 중복값이 제거된다.
+```
+
+<br>
 <br>
 
 # 2단계 문제

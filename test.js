@@ -1,37 +1,16 @@
-const s = "one4seveneight";
+const numbers = [2, 1, 3, 4, 1];
 
-function solution(s) {
-  let numbers = [
-    "zero",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-  ];
+numbers.filter((element, i) => console.log(numbers.indexOf(element)));
 
-  numbers.map((number, i) => (s = s.split(number).join(i)));
-  return Number(s);
-}
-solution(s);
-
-// function solution(s) {
-//   s = s.match(/zero|one|two|three|four|five|six|seven|eight|nine+|[0-9]/g);
-//   const obj = {
-//     zero: 0,
-//     one: 1,
-//     two: 2,
-//     three: 3,
-//     four: 4,
-//     five: 5,
-//     six: 6,
-//     seven: 7,
-//     eight: 8,
-//     nine: 9,
-//   };
-//   return Number(s.map((x) => (obj[x] === undefined ? x : obj[x])).join(""));
+// function solution(numbers) {
+//   let sum = [];
+//   for (let i = 0; i <= numbers.length - 1; i++) {
+//     for (let j = i + 1; j <= numbers.length - 1; j++) {
+//       sum.push(numbers[i] + numbers[j]);
+//     }
+//   }
+//   return sum
+//     .filter((element, i) => sum.indexOf(element) === i)
+//     .sort((a, b) => a - b);
 // }
+// solution(numbers);
