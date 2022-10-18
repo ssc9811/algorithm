@@ -1,16 +1,10 @@
-const numbers = [2, 1, 3, 4, 1];
+const a = 5;
+const b = 24;
 
-numbers.filter((element, i) => console.log(numbers.indexOf(element)));
+function solution(a, b) {
+  const day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  const today = new Date(2016, a - 1, b);
+ console.log( date.toString().slice(0, 3).toUpperCase();
+}
 
-// function solution(numbers) {
-//   let sum = [];
-//   for (let i = 0; i <= numbers.length - 1; i++) {
-//     for (let j = i + 1; j <= numbers.length - 1; j++) {
-//       sum.push(numbers[i] + numbers[j]);
-//     }
-//   }
-//   return sum
-//     .filter((element, i) => sum.indexOf(element) === i)
-//     .sort((a, b) => a - b);
-// }
-// solution(numbers);
+solution(a, b);
