@@ -1192,6 +1192,22 @@ function solution(a, b) {
 ```
 
 <br>
+
+## 1-43 포켓몬
+
+<br>
+
+![스크린샷 2022-10-19 오후 5 30 45](https://user-images.githubusercontent.com/39263149/196639166-f5aa5871-71e6-4ddf-be68-1c35d8d0ebf1.png)
+
+```javascript
+function solution(nums) {
+  const numsLength = nums.length;
+  const setLength = [...new Set(nums)].length;
+  return setLength > numsLength / 2 ? numsLength / 2 : setLength;
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
