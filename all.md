@@ -1208,6 +1208,34 @@ function solution(nums) {
 ```
 
 <br>
+
+## 1-44 소수 찾기
+
+<br>
+
+### 다시 풀어보기
+
+![스크린샷 2022-10-20 오후 4 39 49](https://user-images.githubusercontent.com/39263149/196886691-f0a1ec88-344b-4aa6-b254-f0e3d075be14.png)
+
+```javascript
+function solution(n) {
+  let answer = 0;
+  function isPrime(num) {
+    for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    answer += 1;
+  }
+  for (let num = 2; num <= n; num++) {
+    isPrime(num);
+  }
+  return answer;
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
