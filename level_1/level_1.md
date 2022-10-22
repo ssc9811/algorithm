@@ -45,3 +45,4 @@
 - [포켓몬](./%ED%8F%AC%EC%BC%93%EB%AA%AC.md)
 - [소수 찾기](./%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.md)
 - [모의고사](./%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.md)
+- [소수 만들기](./%EC%86%8C%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)

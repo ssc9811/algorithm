@@ -1309,6 +1309,43 @@ array[ i % length ] 값을 늘려야하는 생각보다, 그 값 내에서 활�
 ```
 
 <br>
+
+## 1-46 소수 만들기
+
+<br>
+
+![스크린샷 2022-10-22 오후 4 56 18](https://user-images.githubusercontent.com/39263149/197327826-c27608b1-39fe-47d1-b2d4-2607097cafe7.png)
+
+```javascript
+function solution(nums) {
+  let answer = 0;
+  for (let i = 0; i < nums.length - 2; i++) {
+    for (let j = i + 1; j < nums.length - 1; j++) {
+      for (let k = j + 1; k < nums.length; k++) {
+        isPrime(nums[i] + nums[j] + nums[k]);
+      }
+    }
+  }
+  function isPrime(num) {
+    for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    answer += 1;
+  }
+  return answer;
+}
+```
+
+### 배운 내용
+
+```
+n개 중 x개 뽑기 문제가 나오면 고민하지 말고 반복문을 뽑는 수만큼 돌려라
+단순하고 심플한 방법인 것 같다.
+```
+
+<br>
 <br>
 
 # 2단계 문제
