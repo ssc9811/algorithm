@@ -1383,3 +1383,21 @@ function solution(s) {
 Math.max(), Math.min()이 문자열도 비교 가능하다는 사실을 알았다.
 형 변환을 할 필요가 없는 문제였다.
 ```
+
+<br>
+
+## 2-2 Jaden Case 문자열 만들기
+
+<br>
+
+![스크린샷 2022-10-23 오후 1 52 55](https://user-images.githubusercontent.com/39263149/197374471-bfd28855-24f6-4a77-975a-998f46405212.png)
+
+```javascript
+function solution(s) {
+  return s
+    .toLowerCase()
+    .split(" ")
+    .map((string) => string.replace(/^[a-z]/, (char) => char.toUpperCase()))
+    .join(" ");
+}
+```
