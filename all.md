@@ -1346,6 +1346,41 @@ n개 중 x개 뽑기 문제가 나오면 고민하지 말고 반복문을 뽑는
 ```
 
 <br>
+
+## 1-47 실패율
+
+<br>
+
+![스크린샷 2022-10-24 오후 4 42 24](https://user-images.githubusercontent.com/39263149/197473524-7f4211dc-1327-486a-b0a5-5b419d408ed5.png)
+![스크린샷 2022-10-24 오후 4 42 34](https://user-images.githubusercontent.com/39263149/197473514-8a025e1f-a251-4376-a4ac-42a2ce5f5b34.png)
+
+```javascript
+function solution(N, stages) {
+  const failRate = [];
+  for (let stage = 1; stage <= N; stage++) {
+    const playerReached = stages.filter((player) => player === stage).length;
+    const playerChallenging = stages.filter((player) => player >= stage).length;
+    failRate.push([stage, playerReached / playerChallenging]);
+  }
+  failRate.sort((a, b) => b[1] - a[1]);
+  return failRate.map((stage) => stage[0]);
+}
+```
+
+### 배운 내용
+
+```
+1. filter
+  player === stage 를 통해 현재 stage에 있는 player의 수를 구한다.
+  player >= stage 를 통해 도전중인 player의 수를 구한다.
+
+2. Array
+  배열의 0번째 index 값에 stage에 대한 값을 넣는다.
+  배열의 1번째 index 값에 실패율에 대한 값을 넣는다.
+  1번째 값으로 정렬을하고, 0번째 값을 return 한다.
+```
+
+<br>
 <br>
 
 # 2단계 문제
