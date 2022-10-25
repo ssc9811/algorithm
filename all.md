@@ -1436,3 +1436,42 @@ function solution(s) {
     .join(" ");
 }
 ```
+
+<br>
+
+## 2-3 최솟값 만들기
+
+<br>
+
+![스크린샷 2022-10-25 오후 6 26 58](https://user-images.githubusercontent.com/39263149/197737230-10772dbb-ddf1-4f35-b133-64f108a5b1b1.png)
+
+```javascript
+function solution(A, B) {
+  var answer = 0;
+  A = A.sort((a, b) => a - b);
+  B = B.sort((a, b) => b - a);
+  for (let i = 0; i < A.length; i++) answer += A[i] * B[i];
+  return answer;
+}
+```
+
+## 다른 풀이
+
+```javascript
+function solution(A, B) {
+  let result = 0;
+  const answer = A.sort((a, b) => a - b).map((AMin) => {
+    let BMax = Math.max(...B);
+    B.splice(B.indexOf(BMax), 1, "-1");
+    return AMin * BMax;
+  });
+
+  answer.map((x) => (result += x));
+  return result;
+}
+```
+
+```
+효용성 테스트가 있는지 모르고 고차함수를 사용했다가 막히고 말았다.
+그냥 for문 돌려서 해결했다.
+```
