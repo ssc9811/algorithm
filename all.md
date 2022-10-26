@@ -1381,6 +1381,41 @@ function solution(N, stages) {
 ```
 
 <br>
+
+## 1-48 다트 게임
+
+<br>
+
+![스크린샷 2022-10-26 오후 7 59 26](https://user-images.githubusercontent.com/39263149/198009535-b8c0f026-e85c-46b8-a303-13c29b3f1f9e.png)
+![스크린샷 2022-10-26 오후 7 59 37](https://user-images.githubusercontent.com/39263149/198009523-d0d88a0a-547a-4232-878d-c8d4ef3bc5f8.png)
+
+```javascript
+function solution(dartResult) {
+  const regex = /\d{1,2}[SDT]{1}[*|#]?/g;
+  let result = [];
+  for (const dart of dartResult.match(regex)) {
+    const game = [...dart.split(/([SDT]{1})/)];
+    const score = game[0];
+    let bonus = 1;
+    let option = 1;
+    if (game[1] === "S") bonus = 1;
+    if (game[1] === "D") bonus = 2;
+    if (game[1] === "T") bonus = 3;
+
+    if (game[2] === "*") {
+      if (result.length !== 0) result[result.length - 1] *= 2;
+      option = 2;
+    }
+    if (game[2] === "#") option = -1;
+
+    result.push(score ** bonus * option);
+  }
+
+  return result.reduce((a, b) => a + b);
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
