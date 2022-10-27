@@ -1416,6 +1416,35 @@ function solution(dartResult) {
 ```
 
 <br>
+
+## 1-49 다트 게임
+
+<br>
+
+![스크린샷 2022-10-27 오후 4 34 36](https://user-images.githubusercontent.com/39263149/198220014-29eb3302-ea2d-44e0-9337-329a2960b3be.png)
+![스크린샷 2022-10-27 오후 4 34 46](https://user-images.githubusercontent.com/39263149/198219999-40340c81-e04d-4c63-b404-23c35ba241ad.png)
+
+```javascript
+function solution(lottos, win_nums) {
+  const rank = {
+    0: 6,
+    1: 6,
+    2: 5,
+    3: 4,
+    4: 3,
+    5: 2,
+    6: 1,
+  };
+  lottos = lottos.sort((a, b) => b - a);
+  const zeroCount = lottos.reduce((acc, cur) => cur === 0 && acc + 1, 0);
+  const correctNumLength = win_nums
+    .sort((a, b) => b - a)
+    .filter((win_num) => lottos.includes(win_num)).length;
+  return [rank[zeroCount + correctNumLength], rank[correctNumLength]];
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
