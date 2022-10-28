@@ -1444,6 +1444,36 @@ function solution(lottos, win_nums) {
 }
 ```
 
+### 다른 사람 풀이
+
+```javascript
+function solution(lottos, win_nums) {
+  const rank = [6, 6, 5, 4, 3, 2, 1];
+
+  let minCount = lottos.filter((v) => win_nums.includes(v)).length;
+  let zeroCount = lottos.filter((v) => !v).length;
+
+  const maxCount = minCount + zeroCount;
+
+  return [rank[maxCount], rank[minCount]];
+}
+```
+
+### 배운 내용
+
+```
+문제를 풀기위한 생각은 동일하다고 생각된다.
+
+1. rank를 배열로만 표현한 것
+  -> 나는 쌍을 이룬다. object로 나타내야한다. 라고 당연스럽게 생각하고 넘어갔던 것 같다. 하지만, 이 경우엔 배열로도 충분히 나타낼 수 있었다.
+
+2. zeroCount를 필터로 구한 것
+  -> 0은 true다. 나는 이걸 생각 못하고 reduce를 통해 0의 값과 같은 수를 더해줬다. 잘못된 방식이라고는 생각하지 않지만 다른 사람의 풀이가 더 간단한 방식이라는 생각이 든다.
+
+3. zeroCount + correctNumLength를 합치지 않은 것
+  -> 알고리즘 풀이에서 사실 중요한 내용은 아니라고 생각되지만, 보기에 훨씬 깔끔해 보인다. 다른 사람이 내 코드를 봤을때 조금 더 깔끔해 보이기 위해 노력을 해야겠다.
+```
+
 <br>
 <br>
 
