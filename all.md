@@ -1569,3 +1569,35 @@ function solution(A, B) {
 효용성 테스트가 있는지 모르고 고차함수를 사용했다가 막히고 말았다.
 그냥 for문 돌려서 해결했다.
 ```
+
+<br>
+
+## 2-4 이진 변환 반복하기
+
+<br>
+
+![스크린샷 2022-10-29 오후 7 00 12](https://user-images.githubusercontent.com/39263149/198825401-84b0366a-c9a4-470a-9b92-4c78f0118396.png)
+
+```javascript
+function solution(s) {
+  const removeZero = (s) => {
+    const removed = s
+      .split("")
+      .filter((n) => n !== "0")
+      .join("");
+    return { removed, count: s.length - removed.length };
+  };
+
+  const convertToBinary = (s, turnCount, removedCount) => {
+    if (s === "1") return [turnCount, removedCount];
+    const { removed, count } = removeZero(s);
+    return convertToBinary(
+      removed.length.toString(2),
+      turnCount + 1,
+      removedCount + count
+    );
+  };
+
+  return convertToBinary(s, 0, 0);
+}
+```
