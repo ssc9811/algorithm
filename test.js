@@ -1,22 +1,27 @@
-const n = 15;
+const n = 5;
+const lost = [2, 4];
+const reserve = [3];
 
-function solution(n) {
-  let answer = 0;
-  let sum = 0;
-  for (let i = 1; i <= n; i++) {
-    for (let j = i; j <= n; j++) {
-      if (sum === n) {
-        answer++;
-        sum = 0;
-        break;
-      } else if (sum > n) {
-        sum = 0;
-        break;
+function solution(n, lost, reserve) {
+  const students = Array(n).fill(1);
+  const overlap = lost.filter((studentNum) => reserve.includes(studentNum));
+
+  lost.forEach((studentNum) => (students[studentNum - 1] = 0));
+  reserve.forEach((studentNum) => (students[studentNum - 1] = 2));
+  overlap.forEach((studentNum) => (students[studentNum - 1] = 1));
+
+  students.forEach((student, i) => {
+    if (student === 2) {
+      if (students[i - 1] === 0) {
+        students[i - 1] = 1;
+        students[i] = 1;
+      } else if (students[i + 1] === 0) {
+        students[i + 1] = 1;
+        students[i] = 1;
       }
-      sum += j;
     }
-  }
-  console.log("answer", answer + 1);
+  });
+  return students.filter((student) => student !== 0).length;
 }
 
-solution(n);
+solution(n, lost, reserve);
