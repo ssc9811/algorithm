@@ -1509,6 +1509,26 @@ function solution(n, lost, reserve) {
 ```
 
 <br>
+
+## 1-51 완주하지 못한 선수
+
+<br>
+
+![스크린샷 2022-11-01 오후 9 52 11](https://user-images.githubusercontent.com/39263149/199236466-f4f5d43b-e5a5-46f5-9d4a-aad749088624.png)
+
+```javascript
+function solution(participant, completion) {
+  participant = participant.sort();
+  completion = completion.sort();
+  for (let i = 0; i < participant.length; i++) {
+    if (participant[i] !== completion[i]) {
+      return participant[i];
+    }
+  }
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제

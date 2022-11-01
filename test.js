@@ -1,27 +1,23 @@
-const n = 5;
-const lost = [2, 4];
-const reserve = [3];
+const participant = ["marina", "josipa", "nikola", "vinko", "filipa"];
+const completion = ["josipa", "filipa", "marina", "nikola"];
 
-function solution(n, lost, reserve) {
-  const students = Array(n).fill(1);
-  const overlap = lost.filter((studentNum) => reserve.includes(studentNum));
-
-  lost.forEach((studentNum) => (students[studentNum - 1] = 0));
-  reserve.forEach((studentNum) => (students[studentNum - 1] = 2));
-  overlap.forEach((studentNum) => (students[studentNum - 1] = 1));
-
-  students.forEach((student, i) => {
-    if (student === 2) {
-      if (students[i - 1] === 0) {
-        students[i - 1] = 1;
-        students[i] = 1;
-      } else if (students[i + 1] === 0) {
-        students[i + 1] = 1;
-        students[i] = 1;
-      }
+function solution(participant, completion) {
+  participant = participant.sort();
+  completion = completion.sort();
+  for (let i = 0; i < participant.length; i++) {
+    if (participant[i] !== completion[i]) {
     }
-  });
-  return students.filter((student) => student !== 0).length;
+  }
+  return participant;
 }
 
-solution(n, lost, reserve);
+solution(participant, completion);
+
+// console.log(participant.join());
+
+// function solution(participant, completion) {
+// completion.map((p) => {
+//   participant.splice(participant.indexOf(p), 1);
+// });
+// return participant.join();
+// }
