@@ -1845,3 +1845,26 @@ function expressions(num) {
 그리고 짝수의 경우는 홀수의 연장선이라고 보면 됨.
 n=30인 경우, 30의 약수는 1, 2, 3, 5, 6, 10, 15, 30임. 30=4 + 5 + 6 + 7 + 8 (중간값 3의 연장) 2x3x5 / 30=9 + 10 + 11 (중간값 5의 연장) 2x5x3 / 30=6+7+8+9 (연속된 두 수의 연장) 2x(7+8) / 30=30 / 결과적으로 n의 홀수 약수 개수만 구해도 답이랑 같음.
 ```
+
+<br>
+
+## 올바른 괄호
+
+<br>
+
+![스크린샷 2022-11-03 오후 3 57 44](https://user-images.githubusercontent.com/39263149/199891185-43cc2416-398a-46fe-9adb-fc7ff9dd53b9.png)
+
+```javascript
+function solution(string) {
+  const answer = [];
+  if (string[0] === ")") return false;
+  else {
+    string.split("").map((char) => {
+      if (char === "(") answer.push(char);
+      else answer.pop();
+    });
+
+    return answer.length === 0 ? true : false;
+  }
+}
+```
