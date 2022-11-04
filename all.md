@@ -1848,7 +1848,7 @@ n=30인 경우, 30의 약수는 1, 2, 3, 5, 6, 10, 15, 30임. 30=4 + 5 + 6 + 7 +
 
 <br>
 
-## 올바른 괄호
+## 2-6 올바른 괄호
 
 <br>
 
@@ -1866,5 +1866,28 @@ function solution(string) {
 
     return answer.length === 0 ? true : false;
   }
+}
+```
+
+<br>
+
+## 2-7 숫자의 표현
+
+<br>
+
+![스크린샷 2022-11-04 오후 2 39 52](https://user-images.githubusercontent.com/39263149/199898583-7d0e67f4-80af-4555-b8be-c75358877510.png)
+
+```javascript
+function solution(n) {
+  const fibonacciArr = new Array(n + 1).fill(0);
+  fibonacciArr[0] = 0;
+  fibonacciArr[1] = 1;
+  let answer = 0;
+  for (let i = 2; i < fibonacciArr.length; i++) {
+    answer = fibonacciArr[i] =
+      (fibonacciArr[i - 1] + fibonacciArr[i - 2]) % 1234567;
+  }
+
+  return answer;
 }
 ```
