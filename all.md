@@ -1925,3 +1925,32 @@ function solution(n) {
   return answer;
 }
 ```
+
+<br>
+
+## 2-8 다음 큰 숫자
+
+<br>
+
+![스크린샷 2022-11-06 오후 3 33 48](https://user-images.githubusercontent.com/39263149/200157666-568596f5-3d68-473e-8d38-88ed112ad6b8.png)
+
+```javascript
+function solution(n) {
+  const oneCount = binaryOne(n);
+  let num = n + 1;
+  while (true) {
+    const nextBinaryOneCount = binaryOne(num);
+    if (nextBinaryOneCount === oneCount) return num;
+    num++;
+  }
+}
+
+function binaryOne(n) {
+  let oneCount = 0;
+  const binary = n.toString(2);
+  for (let i of binary) {
+    if (i === "1") oneCount++;
+  }
+  return oneCount;
+}
+```
