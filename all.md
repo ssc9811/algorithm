@@ -1680,6 +1680,31 @@ function solution(board, moves) {
 ```
 
 <br>
+
+## 1-54 삼총사
+
+<br>
+
+![스크린샷 2022-11-09 오후 5 46 38](https://user-images.githubusercontent.com/39263149/200782871-153a2c91-21ac-4d7c-8365-5aa38e8c7cea.png)
+![스크린샷 2022-11-09 오후 5 46 43](https://user-images.githubusercontent.com/39263149/200782867-025ceaaa-35a0-41eb-ad40-7cf3b8f6555e.png)
+
+```javascript
+function solution(number) {
+  let answer = 0;
+  for (let i = 0; i < number.length; i++) {
+    for (let j = i + 1; j < number.length; j++) {
+      for (let k = j + 1; k < number.length; k++) {
+        if (number[i] + number[j] + number[k] === 0) {
+          answer++;
+        }
+      }
+    }
+  }
+  return answer;
+}
+```
+
+<br>
 <br>
 
 # 2단계 문제
