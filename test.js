@@ -1,18 +1,19 @@
-const number = [-1, 1, -1, 1];
+const a = 3;
+const b = 2;
+const n = 20;
 
-function solution(number) {
-  number = number.sort();
+// 빈병 a 개 , 콜라 b 병을준다, n 개를 가져다주면 ??
+
+function solution(a, b, n) {
   let answer = 0;
-  for (let i = 0; i < number.length; i++) {
-    for (let j = i + 1; j < number.length; j++) {
-      for (let k = j + 1; k < number.length; k++) {
-        if (number[i] + number[j] + number[k] === 0) {
-          answer++;
-        }
-      }
-    }
+  let remainder = 0;
+  while (n >= a) {
+    remainder = n % a;
+    n = Math.floor(n / a) * b;
+    answer += n;
+    n += remainder;
   }
   return answer;
 }
 
-solution(number);
+solution(a, b, n);
