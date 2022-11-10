@@ -1,19 +1,37 @@
-const a = 3;
-const b = 2;
-const n = 20;
+const food = [1, 7, 1, 2];
 
-// 빈병 a 개 , 콜라 b 병을준다, n 개를 가져다주면 ??
+// 물 1개
+// 1칼로리 3개
+// 2칼로리 4개
+// 3칼로리 6개
 
-function solution(a, b, n) {
-  let answer = 0;
-  let remainder = 0;
-  while (n >= a) {
-    remainder = n % a;
-    n = Math.floor(n / a) * b;
-    answer += n;
-    n += remainder;
-  }
-  return answer;
+function solution(food) {
+  const answer = [];
+  food.map((element, idx) => {
+    let item = Math.floor(element / 2);
+    if (idx !== 0) {
+      while (item > 0) {
+        answer.push(idx);
+        item--;
+      }
+    }
+  });
+  return answer.join("") + 0 + answer.reverse().join("");
 }
+solution(food);
 
-solution(a, b, n);
+function solution(food) {
+  const answer = [];
+  food.map((element, idx) => {
+    let item = Math.floor(element / 2);
+    if (idx !== 0) {
+      while (item > 0) {
+        answer.push(idx);
+        item--;
+      }
+    }
+  });
+  let answerR = [...answer];
+  answerR = answerR.reverse();
+  return [...answer, 0, ...answerR].join("");
+}
