@@ -2065,3 +2065,41 @@ function solution(brown, yellow) {
   }
 }
 ```
+
+<br>
+
+## 2-10 짝지어 제거하기
+
+<br>
+
+![스크린샷 2022-11-11 오후 3 10 33](https://user-images.githubusercontent.com/39263149/201275170-a8893a5d-f473-4901-bb65-1a43dc3d2aec.png)
+
+```javascript
+function solution(s) {
+  const notPair = [];
+  notPair.push(s[0]);
+  for (let i = 1; i < s.length; i++) {
+    if (notPair[notPair.length - 1] === s[i]) {
+      notPair.pop();
+    } else {
+      notPair.push(s[i]);
+    }
+  }
+  return notPair.length === 0 ? 1 : 0;
+}
+```
+
+### 오답 (정확성 통과, 효율성 실패)
+
+```javascript
+function solution(s) {
+  s = s.split("");
+  for (let i = 0; i < s.length; i++) {
+    if (s[i - 1] === s[i]) {
+      s.splice(i - 1, 2);
+      i = 0;
+    }
+  }
+  return s.length === 0 ? 1 : 0;
+}
+```
