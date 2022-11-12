@@ -2103,3 +2103,30 @@ function solution(s) {
   return s.length === 0 ? 1 : 0;
 }
 ```
+
+<br>
+
+## 2-11 영어 끝말잇기
+
+<br>
+
+![스크린샷 2022-11-12 오후 2 23 14](https://user-images.githubusercontent.com/39263149/201507228-54caacc0-d840-4e03-ba27-2bbe1190913a.png)
+![스크린샷 2022-11-12 오후 2 23 31](https://user-images.githubusercontent.com/39263149/201507226-27d8ab64-75da-4618-bb18-8838cfbe507b.png)
+
+```javascript
+function solution(n, words) {
+  for (let i = 1; i < words.length; i++) {
+    let pass =
+      words[i].slice(0, 1) === words[i - 1].slice(-1) &&
+      !words.slice(0, i).includes(words[i]);
+    if (!pass) return [(i % n) + 1, Math.ceil((i + 1) / n)];
+  }
+  return [0, 0];
+}
+```
+
+### 배운 내용
+
+```
+false일때 리턴이 아닌 true인 경우를 변수로 지정해주고, 이 값이 false일때 return 해주는 방식도 괜찮은 것 같다.
+```
