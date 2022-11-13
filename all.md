@@ -2130,3 +2130,32 @@ function solution(n, words) {
 ```
 false일때 리턴이 아닌 true인 경우를 변수로 지정해주고, 이 값이 false일때 return 해주는 방식도 괜찮은 것 같다.
 ```
+
+<br>
+
+## 2-12 구명보트
+
+<br>
+
+![스크린샷 2022-11-13 오후 2 29 16](https://user-images.githubusercontent.com/39263149/201508243-230ac2c3-4910-4b38-a402-30bec81801d2.png)
+
+```javascript
+function solution(people, limit) {
+  people.sort((a, b) => b - a);
+  let answer = 0;
+  let min = 0;
+  let max = people.length - 1;
+  while (min < max) {
+    let sum = people[min] + people[max];
+    if (sum <= limit) {
+      min++;
+      max--;
+    } else {
+      min++;
+    }
+    answer++;
+  }
+  if (min === max) answer++;
+  return answer;
+}
+```
