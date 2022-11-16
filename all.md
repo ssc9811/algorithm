@@ -2192,3 +2192,25 @@ function gcd(a, b) {
   return a % b ? gcd(b, a % b) : b;
 }
 ```
+
+<br>
+
+## 2-14 예상 대진표
+
+<br>
+
+![스크린샷 2022-11-16 오후 5 04 58](https://user-images.githubusercontent.com/39263149/202122499-17549113-de40-4339-b1f7-06aacb786f5d.png)
+
+```javascript
+function solution(n, a, b) {
+  let round = 1;
+  const nextNumber = (number) => Math.floor((number + 1) / 2);
+  while (a !== b) {
+    if (nextNumber(a) === nextNumber(b)) break;
+    a = nextNumber(a);
+    b = nextNumber(b);
+    round++;
+  }
+  return round;
+}
+```
