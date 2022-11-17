@@ -1,17 +1,11 @@
-const n = 8; // 참가자
-const a = 4;
-const b = 7;
-
-function solution(n, a, b) {
-  let round = 1;
-  const nextNumber = (number) => Math.floor((number + 1) / 2);
-  while (a !== b) {
-    if (nextNumber(a) === nextNumber(b)) break;
-    a = nextNumber(a);
-    b = nextNumber(b);
-    round++;
+const n = 5000;
+function solution(n) {
+  let result = 0;
+  while (n > 0) {
+    result += n % 2;
+    n = Math.floor(n / 2);
   }
-  console.log(round);
+  return result;
 }
 
-solution(n, a, b);
+solution(n);
