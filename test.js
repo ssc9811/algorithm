@@ -1,11 +1,6 @@
-const n = 5000;
-function solution(n) {
-  let result = 0;
-  while (n > 0) {
-    result += n % 2;
-    n = Math.floor(n / 2);
-  }
-  return result;
+function solution(n, k) {
+  const newK = Math.floor(n / 10);
+  return n * 12000 + (k - newK) * 2000;
 }
 
-solution(n);
+solution(64, 6);
