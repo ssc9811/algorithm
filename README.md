@@ -31,6 +31,6 @@
 >
 > ## [프로그래머스](https://programmers.co.kr/?utm_source=google&utm_medium=cpc&utm_campaign=brand_prgms_pc&gclid=Cj0KCQjwpeaYBhDXARIsAEzItbGapElwZebk0CA8nNp5yaJU3OjNZfCvWxkXNWBjPc-EpPqajXBxxvEaAm_gEALw_wcB)
 >
-> ### [전체 문제](./all.md)
+> ### [전체 문제](./re_all.md)
 >
-> ### [Level 1 문제](./level_1/level_1.md)
+> ### [Level 1 문제](./re_level_1/re_level_1.md)
