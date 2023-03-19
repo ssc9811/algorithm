@@ -25,3 +25,37 @@ function solution(num) {
 ```
 
 <hr />
+
+## 1-3 약수의 합
+
+![image](https://user-images.githubusercontent.com/39263149/226169757-e7521029-6cea-4310-80d2-95a2eb3782c3.png)
+
+```javascript
+function solution(n) {
+  let answer = 0;
+  for (let i = 0; i <= n; i++) {
+    if (n % i === 0) {
+      answer += i;
+    }
+  }
+  return answer;
+}
+```
+
+<hr />
+
+## 1-4 자릿수 더하기
+
+![image](https://user-images.githubusercontent.com/39263149/226170609-d7ff2e51-c86f-4b38-9762-29aa6c833bd1.png)
+
+```javascript
+function solution(n) {
+  let answer = 0;
+  String(n)
+    .split("")
+    .map((number) => (answer += +number));
+  return answer;
+}
+```
+
+<hr />
