@@ -12,8 +12,6 @@ function solution(arr) {
 }
 ```
 
-<hr />
-
 ## 1-2 짝수와 홀수
 
 ![image](https://user-images.githubusercontent.com/39263149/226169419-45a2c304-9600-4efe-ad49-ec0f31b21a28.png)
@@ -23,8 +21,6 @@ function solution(num) {
   return num % 2 ? "Odd" : "Even";
 }
 ```
-
-<hr />
 
 ## 1-3 약수의 합
 
@@ -42,8 +38,6 @@ function solution(n) {
 }
 ```
 
-<hr />
-
 ## 1-4 자릿수 더하기
 
 ![image](https://user-images.githubusercontent.com/39263149/226170609-d7ff2e51-c86f-4b38-9762-29aa6c833bd1.png)
@@ -58,8 +52,6 @@ function solution(n) {
 }
 ```
 
-<hr />
-
 ## 1-5 x만큼 간격이 있는 n개의 숫자
 
 ![image](https://user-images.githubusercontent.com/39263149/226282425-8d3bd6df-fbf0-483a-a555-3a82933acc9a.png)
@@ -71,5 +63,18 @@ function solution(x, n) {
     answer.push(x * i);
   }
   return answer;
+}
+```
+
+## 1-5 자연수 뒤집어 배열로 만들기
+
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/39263149/226624951-801fb1ea-4495-459b-ba0e-669a54430784.png">
+
+```javascript
+function solution(n) {
+  return String(n)
+    .split("")
+    .reverse()
+    .map((n) => +n);
 }
 ```
