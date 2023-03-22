@@ -78,3 +78,26 @@ function solution(n) {
     .map((n) => +n);
 }
 ```
+
+### 1-6 문자열 내 p와 y의 개수
+
+<img width="575" alt="image" src="https://user-images.githubusercontent.com/39263149/226887676-637f58a1-6a3b-466d-ba49-24f3a304e450.png">
+
+```javascript
+function solution(string) {
+  const PArray = [];
+  const YArray = [];
+  string
+    .split("")
+    .map((word) => word.toUpperCase())
+    .filter((filterWord) => {
+      if (filterWord === "P") {
+        PArray.push(filterWord);
+      } else if (filterWord === "Y") {
+        YArray.push(filterWord);
+      }
+    });
+
+  return PArray.length === YArray.length;
+}
+```
