@@ -101,3 +101,17 @@ function solution(string) {
   return PArray.length === YArray.length;
 }
 ```
+
+### 1-7 나머지가 1이 되는 수 찾기
+
+![image](https://user-images.githubusercontent.com/39263149/227159136-ca4df0fb-79ed-4d78-81d5-792b4604de32.png)
+
+```javascript
+function solution(n) {
+  for (let i = 0; i < n; i++) {
+    if (n % i === 1) {
+      return i;
+    }
+  }
+}
+```
