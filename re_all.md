@@ -143,3 +143,13 @@ function solution(n) {
   return nums.sort((a, b) => b - a).join("") * 1;
 }
 ```
+
+### 1-9 문자열을 정수로 바꾸기
+
+<img width="503" alt="image" src="https://user-images.githubusercontent.com/39263149/227694871-b1c39ff8-79a1-49db-b5b8-8c8aed33848a.png">
+
+```javascript
+function solution(string) {
+  return +string;
+}
+```
