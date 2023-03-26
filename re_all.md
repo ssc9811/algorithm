@@ -153,3 +153,18 @@ function solution(string) {
   return +string;
 }
 ```
+
+### 1-10 하샤드 수
+
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/39263149/227757789-466058dd-121f-44da-a442-bd6d5e4123b5.png">
+
+```javascript
+function solution(x) {
+  return !(
+    x %
+    String(x)
+      .split("")
+      .reduce((acc, cur) => (acc += +cur), 0)
+  );
+}
+```
