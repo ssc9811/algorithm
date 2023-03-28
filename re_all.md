@@ -229,3 +229,17 @@ function solution(a, b) {
   return answer;
 }
 ```
+
+<br>
+
+### 1-13 정수 제곱근 판별
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/228220698-750c9b3d-c445-4a12-a4ea-c680392b4654.png)
+
+```javascript
+function solution(n) {
+  return Number.isInteger(Math.sqrt(n)) ? (Math.sqrt(n) + 1) ** 2 : -1;
+}
+```
