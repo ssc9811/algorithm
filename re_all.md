@@ -265,3 +265,23 @@ function solution(num) {
   return cnt > 500 ? -1 : cnt;
 }
 ```
+
+<br>
+
+### 1-15 서울에서 김서방 찾기
+
+<br>
+
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/39263149/228825100-fc554249-8b34-4bab-a076-38fda44d24fa.png">
+
+```javascript
+function solution(seoul) {
+  return `김서방은 ${seoul.indexOf("Kim")}에 있다`;
+}
+
+function solution(seoul) {
+  return `김서방은 ${seoul.findIndex(
+    (value) => value === "Kim" && value
+  )}에 있다`;
+}
+```
