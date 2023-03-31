@@ -285,3 +285,20 @@ function solution(seoul) {
   )}에 있다`;
 }
 ```
+
+<br>
+
+### 1-16 나누어 떨어지는 숫자 배열
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/229041864-2bcde95d-9ff8-4d50-81b1-c5f3ab575424.png)
+
+```javascript
+function solution(arr, divisor) {
+  const answer = arr
+    .filter((element) => element % divisor === 0)
+    .sort((a, b) => a - b);
+  return answer.length > 0 ? answer : [-1];
+}
+```
