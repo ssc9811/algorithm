@@ -302,3 +302,19 @@ function solution(arr, divisor) {
   return answer.length > 0 ? answer : [-1];
 }
 ```
+
+<br>
+
+### 1-17 제일 작은 수 제거하기
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/229266075-854fed1c-8d53-41ad-804c-6c17cd7d63ef.png)
+
+```javascript
+function solution(arr) {
+  return arr.length > 1
+    ? arr.filter((item) => item !== Math.min(...arr))
+    : [-1];
+}
+```
