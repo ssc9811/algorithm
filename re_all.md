@@ -351,3 +351,17 @@ function solution(absolutes, signs) {
 아직 reduce보단 map이 익숙하고 편한것 같다.
 고차함수 외부 변수에 무언가 계속 더하거나 빼는 일이(누산기) 반복되면 reduce를 생각하는 습관을 가지면 좋을 것 같다.
 ```
+
+<br>
+
+### 1-19 핸드폰 번호 가리기
+
+<br>
+
+<img width="580" alt="image" src="https://user-images.githubusercontent.com/39263149/229475840-7ec076a8-bf1c-46d4-89bf-6ce8c1d2ec58.png">
+
+```javascript
+function solution(phone_number) {
+  return `${"*".repeat(phone_number.length - 4)}${phone_number.slice(-4)}`;
+}
+```
