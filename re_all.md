@@ -365,3 +365,17 @@ function solution(phone_number) {
   return `${"*".repeat(phone_number.length - 4)}${phone_number.slice(-4)}`;
 }
 ```
+
+<br>
+
+### 1-20 없는 숫자 더하기
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/229660156-61b6cb52-e5dc-4893-a8e4-aad3bc89bdf4.png)
+
+```javascript
+function solution(numbers) {
+  return 45 - numbers.reduce((acc, cur) => (acc += cur));
+}
+```
