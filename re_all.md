@@ -379,3 +379,18 @@ function solution(numbers) {
   return 45 - numbers.reduce((acc, cur) => (acc += cur));
 }
 ```
+
+<br>
+
+### 1-21 가운데 글자 가져오기
+
+<br>
+
+![스크린샷 2022-09-27 오후 7 40 58](https://user-images.githubusercontent.com/39263149/192504998-5e976626-f3ec-4776-b1c6-e31442316700.png)
+
+```javascript
+function solution(s) {
+  const mid = s.length / 2;
+  return s.length % 2 === 0 ? s.slice(mid - 1, mid + 1) : s[Math.floor(mid)];
+}
+```
