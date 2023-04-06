@@ -394,3 +394,17 @@ function solution(s) {
   return s.length % 2 === 0 ? s.slice(mid - 1, mid + 1) : s[Math.floor(mid)];
 }
 ```
+
+<br>
+
+### 1-22 수박수박수박수박수박수?
+
+<br>
+
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/39263149/230328145-b9d3f053-71b9-4511-bfb1-8e4d8844f712.png">
+
+```javascript
+function solution(n) {
+  "수박".repeat(2).substring(0, n);
+}
+```
