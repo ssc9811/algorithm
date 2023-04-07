@@ -408,3 +408,17 @@ function solution(n) {
   "수박".repeat(2).substring(0, n);
 }
 ```
+
+<br>
+
+### 1-22 문자열 내림차순으로 배치하기
+
+<br>
+
+<img width="576" alt="image" src="https://user-images.githubusercontent.com/39263149/230565777-caca3436-fd36-4054-9744-0675604b5f55.png">
+
+```javascript
+function solution(s) {
+  return s.split("").sort().reverse().join("");
+}
+```
