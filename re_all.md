@@ -411,7 +411,7 @@ function solution(n) {
 
 <br>
 
-### 1-22 문자열 내림차순으로 배치하기
+### 1-23 문자열 내림차순으로 배치하기
 
 <br>
 
@@ -420,5 +420,20 @@ function solution(n) {
 ```javascript
 function solution(s) {
   return s.split("").sort().reverse().join("");
+}
+```
+
+<br>
+
+### 1-24 문자열 다루기 기본
+
+<br>
+
+<img width="584" alt="image" src="https://user-images.githubusercontent.com/39263149/230567916-5fe77d35-982a-4ccd-954f-d149059bcefe.png">
+
+```javascript
+function solution(s) {
+  const regExp = /^[0-9]+$/;
+  return s.length === 4 || s.length === 6 ? regExp.test(s) : false;
 }
 ```
