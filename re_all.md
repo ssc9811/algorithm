@@ -437,3 +437,17 @@ function solution(s) {
   return s.length === 4 || s.length === 6 ? regExp.test(s) : false;
 }
 ```
+
+<br>
+
+### 1-25 내적
+
+<br>
+
+<img width="569" alt="image" src="https://user-images.githubusercontent.com/39263149/230756259-7418bb69-8af2-4492-9180-9cc46e347890.png">
+
+```javascript
+function solution(a, b) {
+  return a.reduce((acc, cur, idx) => (acc += cur * b[idx]), 0);
+}
+```
