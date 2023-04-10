@@ -451,3 +451,18 @@ function solution(a, b) {
   return a.reduce((acc, cur, idx) => (acc += cur * b[idx]), 0);
 }
 ```
+
+<br>
+
+### 1-26 부족한 금액 계산하기
+
+<br>
+
+<img width="563" alt="image" src="https://user-images.githubusercontent.com/39263149/230874814-2eb3fa29-8ce9-4027-bf25-05dee58efe6a.png">
+
+```javascript
+function solution(price, money, count) {
+  let answer = (count * (price + price * count)) / 2 - money;
+  return answer > 0 ? answer : 0;
+}
+```
