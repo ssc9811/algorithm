@@ -466,3 +466,34 @@ function solution(price, money, count) {
   return answer > 0 ? answer : 0;
 }
 ```
+
+<br>
+
+### 1-27 행렬의 덧셈
+
+<br>
+
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/39263149/231153590-ba4f6a1a-7867-4c07-a6a4-4245115fb37f.png">
+
+### 풀이 1
+
+```javascript
+function solution(arr1, arr2) {
+  const answer = [];
+  for (let i = 0; i < arr1.length; i++) {
+    answer.push([]);
+    for (let j = 0; j < arr1[i].length; j++) {
+      answer[i].push(arr1[i][j] + arr2[i][j]);
+    }
+  }
+  return answer;
+}
+```
+
+### 풀이 2
+
+```javascript
+function solution(arr1, arr2) {
+  return arr1.map((arr, i) => arr.map((value, j) => value + arr2[i][j]));
+}
+```
