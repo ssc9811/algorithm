@@ -497,3 +497,42 @@ function solution(arr1, arr2) {
   return arr1.map((arr, i) => arr.map((value, j) => value + arr2[i][j]));
 }
 ```
+
+<br>
+
+### 1-28 직사각형 별찍기
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/231320247-017ac7dd-8ee4-4ed7-bfd8-6b0a67f3947f.png)
+
+### 풀이 1
+
+```javascript
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (data) => {
+  const n = data.split(" ");
+  const width = Number(n[0]),
+    height = Number(n[1]);
+  for (let i = 1; i <= height; i++) {
+    for (let j = 1; j <= width; j++) {
+      process.stdout.write("*");
+    }
+    console.log("");
+  }
+});
+```
+
+### 풀이 2
+
+```javascript
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (data) => {
+  const n = data.split(" ");
+  const width = Number(n[0]),
+    height = Number(n[1]);
+  for (let i = 1; i <= height; i++) {
+    console.log("*".repeat(width));
+  }
+});
+```
