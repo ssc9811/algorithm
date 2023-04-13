@@ -536,3 +536,19 @@ process.stdin.on("data", (data) => {
   }
 });
 ```
+
+<br>
+
+### 1-29 최대공약수와 최소공배수
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/231639615-3fb37e0a-f954-4c01-baa3-a8b64f8dc5e1.png)
+
+```javascript
+function solution(num1, num2) {
+  const gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
+  const lcm = (a, b) => (a * b) / gcd(a, b);
+  return [gcd(num1, num2), lcm(num1, num2)];
+}
+```
