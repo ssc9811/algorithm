@@ -552,3 +552,40 @@ function solution(num1, num2) {
   return [gcd(num1, num2), lcm(num1, num2)];
 }
 ```
+
+<br>
+
+### 1-30 약수의 개수와 덧셈
+
+<br>
+
+<img width="567" alt="image" src="https://user-images.githubusercontent.com/39263149/231938990-3e712240-5c91-4433-90d6-f3b532ca7b0e.png">
+
+```javascript
+const check = (num) => {
+  let cnt = 0;
+  let index = 0;
+  while (num >= index) {
+    if (num % index === 0) {
+      cnt += 1;
+    }
+    index += 1;
+  }
+  return cnt % 2 ? -1 * num : num;
+};
+
+function solution(left, right) {
+  let answer = 0;
+
+  for (let i = left; i <= right; i++) {
+    answer += check(i);
+  }
+  return answer;
+}
+```
+
+### 배운점
+
+```
+제곱근이 정수면 약수의 개수가 홀수다.
+```
