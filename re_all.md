@@ -589,3 +589,17 @@ function solution(left, right) {
 ```
 제곱근이 정수면 약수의 개수가 홀수다.
 ```
+
+<br>
+
+### 1-31 같은 숫자는 싫어
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/232190209-988e822c-843b-4715-91b3-3553c0baaa20.png)
+
+```javascript
+function solution(arr) {
+  return arr.filter((item, index) => item !== arr[index + 1]);
+}
+```
