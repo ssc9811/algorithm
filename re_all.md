@@ -603,3 +603,27 @@ function solution(arr) {
   return arr.filter((item, index) => item !== arr[index + 1]);
 }
 ```
+
+<br>
+
+### 1-32 이상한 문자 만들기
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/232263306-aec47dcc-da22-4d15-979a-cafee064cecf.png)
+
+```javascript
+function solution(s) {
+  return s
+    .split(" ")
+    .map((world) =>
+      world
+        .split("")
+        .map((char, index) =>
+          index % 2 ? char.toLowerCase() : char.toUpperCase()
+        )
+        .join("")
+    )
+    .join(" ");
+}
+```
