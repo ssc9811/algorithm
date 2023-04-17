@@ -627,3 +627,21 @@ function solution(s) {
     .join(" ");
 }
 ```
+
+<br>
+
+### 1-33 문자열 내 마음대로 정렬하기
+
+<br>
+
+<img width="572" alt="image" src="https://user-images.githubusercontent.com/39263149/232467257-89c2cdb0-6f60-4a49-9cf5-aa54f41de8dc.png">
+
+```javascript
+function solution(strings, n) {
+  return strings.sort((a, b) => {
+    if (a[n] > b[n]) return +1;
+    else if (a[n] === b[n]) return a > b ? 1 : -1;
+    else return -1;
+  });
+}
+```
