@@ -684,3 +684,24 @@ var decimal = parseInt(octal, 8); // 8진수에서 10진수로
 var hex = "3ff";
 var decimal = parseInt(hex, 16); // 16진수에서 10진수로
 ```
+
+<br>
+
+### 1-35 예산
+
+<br>
+
+<img width="565" alt="image" src="https://user-images.githubusercontent.com/39263149/233092186-6c5720ef-af22-4249-a5c0-dd5af3fc9089.png">
+
+```javascript
+function solution(d, budget) {
+  return d
+    .sort((a, b) => a - b)
+    .filter((list) => {
+      budget -= list;
+      if (budget >= 0) {
+        return list;
+      }
+    }).length;
+}
+```
