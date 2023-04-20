@@ -705,3 +705,27 @@ function solution(d, budget) {
     }).length;
 }
 ```
+
+<br>
+
+### 1-36 삼총사
+
+<br>
+
+<img width="572" alt="image" src="https://user-images.githubusercontent.com/39263149/233388204-b88da72d-914b-4f61-ad7d-bab6917c7fa8.png">
+
+```javascript
+function solution(number) {
+  let count = 0;
+  for (let i = 0; i < number.length; i++) {
+    for (let j = i + 1; j < number.length; j++) {
+      for (let k = j + 1; k < number.length; k++) {
+        if (number[i] + number[j] + number[k] === 0) {
+          count += 1;
+        }
+      }
+    }
+  }
+  return count;
+}
+```
