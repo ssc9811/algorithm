@@ -729,3 +729,24 @@ function solution(number) {
   return count;
 }
 ```
+
+<br>
+
+### 1-37 최소직사각형
+
+<br>
+
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/39263149/233518193-930dcd12-3455-4c3a-9834-7f0bc42a3741.png">
+
+```javascript
+function solution(sizes) {
+  const width = [];
+  const height = [];
+  sizes.map((size) => {
+    size.sort((a, b) => a - b);
+    width.push(size[0]);
+    height.push(size[1]);
+  });
+  return Math.max(...width) * Math.max(...height);
+}
+```
