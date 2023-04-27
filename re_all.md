@@ -877,3 +877,43 @@ function solution(t, p) {
   return answer.filter((list) => list <= p).length;
 }
 ```
+
+<br>
+
+### 1-43 두 개 뽑아서 더하기
+
+<br>
+
+<img width="567" alt="image" src="https://user-images.githubusercontent.com/39263149/234859082-c38f6a23-0abf-4f82-8421-755e09c4914b.png">
+
+### filter를 통한 중복 제거
+
+```javascript
+function solution(numbers) {
+  const answer = [];
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      answer.push(numbers[i] + numbers[j]);
+    }
+  }
+  return answer
+    .filter((item, index) => answer.indexOf(item) === index)
+    .sort((a, b) => a - b);
+}
+```
+
+### Set을 통한 중복 제거
+
+```javascript
+function solution(numbers) {
+  const temp = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      temp.push(numbers[i] + numbers[j]);
+    }
+  }
+
+  return [...new Set(temp)].sort((a, b) => a - b);
+}
+```
