@@ -917,3 +917,37 @@ function solution(numbers) {
   return [...new Set(temp)].sort((a, b) => a - b);
 }
 ```
+
+<br>
+
+### 1-44 콜라 문제
+
+<br>
+
+![image](https://user-images.githubusercontent.com/39263149/234882987-4c1b0322-8d0b-4103-b810-ff0d5c5a139b.png)
+![image](https://user-images.githubusercontent.com/39263149/234883029-3da08e7b-e2a8-4030-bcb0-62c41aa15b79.png)
+
+```javascript
+function solution(a, b, n) {
+  let count = 0;
+  let less = 0;
+  while (n >= a) {
+    less = n % a;
+    n = Math.floor(n / a) * b;
+    count += n;
+    n += less;
+  }
+  return count;
+}
+```
+
+```javascript
+function solution(a, b, n) {
+  let answer = 0;
+  while (n >= a) {
+    answer += parseInt(n / a) * b;
+    n = parseInt(n / a) * b + (n % a);
+  }
+  return answer;
+}
+```
