@@ -951,3 +951,46 @@ function solution(a, b, n) {
   return answer;
 }
 ```
+
+<br>
+
+### 1-45 푸드 파이트 대회
+
+<br>
+
+<img width="571" alt="image" src="https://user-images.githubusercontent.com/39263149/235339529-d39ac7d4-5dfb-4065-ad44-860b07faf358.png">
+<img width="571" alt="image" src="https://user-images.githubusercontent.com/39263149/235339532-bc74fa4b-ae68-4c2a-a1db-ac7abb7267af.png">
+
+```javascript
+function solution(food) {
+  const answer = [];
+  const newArray = food.map((amount) =>
+    amount % 2 === 0 ? amount / 2 : (amount - 1) / 2
+  );
+  newArray.map((item, index) => {
+    while (item > 0) {
+      answer.push(index);
+      item--;
+    }
+  });
+  const result = [...answer, 0, ...answer.reverse()];
+  return result.join("");
+}
+```
+
+### 코드 정리
+
+```javascript
+function solution(food) {
+  const answer = [];
+  food.map((amount, index) => {
+    let item = Math.floor(amount / 2);
+    while (index !== 0 && item > 0) {
+      answer.push(index);
+      item--;
+    }
+  });
+  const result = [...answer, 0, ...answer.reverse()];
+  return result.join("");
+}
+```
