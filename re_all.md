@@ -102,7 +102,7 @@ function solution(n) {
 
 <br>
 
-### 1-7 문자열 내 p와 y의 개수
+## 1-7 문자열 내 p와 y의 개수
 
 <br>
 
@@ -129,7 +129,7 @@ function solution(string) {
 
 <br>
 
-### 1-8 나머지가 1이 되는 수 찾기
+## 1-8 나머지가 1이 되는 수 찾기
 
 <br>
 
@@ -147,7 +147,7 @@ function solution(n) {
 
 <br>
 
-### 1-9 정수 내림차순으로 배치하기
+## 1-9 정수 내림차순으로 배치하기
 
 <br>
 
@@ -179,7 +179,7 @@ function solution(n) {
 
 <br>
 
-### 1-10 문자열을 정수로 바꾸기
+## 1-10 문자열을 정수로 바꾸기
 
 <br>
 
@@ -193,7 +193,7 @@ function solution(string) {
 
 <br>
 
-### 1-11 하샤드 수
+## 1-11 하샤드 수
 
 <br>
 
@@ -212,7 +212,7 @@ function solution(x) {
 
 <br>
 
-### 1-12 두 정수 사이의 합
+## 1-12 두 정수 사이의 합
 
 <br>
 
@@ -232,7 +232,7 @@ function solution(a, b) {
 
 <br>
 
-### 1-13 정수 제곱근 판별
+## 1-13 정수 제곱근 판별
 
 <br>
 
@@ -246,7 +246,7 @@ function solution(n) {
 
 <br>
 
-### 1-14 콜라츠 추측
+## 1-14 콜라츠 추측
 
 <br>
 
@@ -268,7 +268,7 @@ function solution(num) {
 
 <br>
 
-### 1-15 서울에서 김서방 찾기
+## 1-15 서울에서 김서방 찾기
 
 <br>
 
@@ -288,7 +288,7 @@ function solution(seoul) {
 
 <br>
 
-### 1-16 나누어 떨어지는 숫자 배열
+## 1-16 나누어 떨어지는 숫자 배열
 
 <br>
 
@@ -305,7 +305,7 @@ function solution(arr, divisor) {
 
 <br>
 
-### 1-17 제일 작은 수 제거하기
+## 1-17 제일 작은 수 제거하기
 
 <br>
 
@@ -321,7 +321,7 @@ function solution(arr) {
 
 <br>
 
-### 1-18 음양 더하기
+## 1-18 음양 더하기
 
 <br>
 
@@ -354,7 +354,7 @@ function solution(absolutes, signs) {
 
 <br>
 
-### 1-19 핸드폰 번호 가리기
+## 1-19 핸드폰 번호 가리기
 
 <br>
 
@@ -368,7 +368,7 @@ function solution(phone_number) {
 
 <br>
 
-### 1-20 없는 숫자 더하기
+## 1-20 없는 숫자 더하기
 
 <br>
 
@@ -382,7 +382,7 @@ function solution(numbers) {
 
 <br>
 
-### 1-21 가운데 글자 가져오기
+## 1-21 가운데 글자 가져오기
 
 <br>
 
@@ -397,7 +397,7 @@ function solution(s) {
 
 <br>
 
-### 1-22 수박수박수박수박수박수?
+## 1-22 수박수박수박수박수박수?
 
 <br>
 
@@ -411,7 +411,7 @@ function solution(n) {
 
 <br>
 
-### 1-23 문자열 내림차순으로 배치하기
+## 1-23 문자열 내림차순으로 배치하기
 
 <br>
 
@@ -425,7 +425,7 @@ function solution(s) {
 
 <br>
 
-### 1-24 문자열 다루기 기본
+## 1-24 문자열 다루기 기본
 
 <br>
 
@@ -440,7 +440,7 @@ function solution(s) {
 
 <br>
 
-### 1-25 내적
+## 1-25 내적
 
 <br>
 
@@ -454,7 +454,7 @@ function solution(a, b) {
 
 <br>
 
-### 1-26 부족한 금액 계산하기
+## 1-26 부족한 금액 계산하기
 
 <br>
 
@@ -469,7 +469,7 @@ function solution(price, money, count) {
 
 <br>
 
-### 1-27 행렬의 덧셈
+## 1-27 행렬의 덧셈
 
 <br>
 
@@ -500,7 +500,7 @@ function solution(arr1, arr2) {
 
 <br>
 
-### 1-28 직사각형 별찍기
+## 1-28 직사각형 별찍기
 
 <br>
 
@@ -539,7 +539,7 @@ process.stdin.on("data", (data) => {
 
 <br>
 
-### 1-29 최대공약수와 최소공배수
+## 1-29 최대공약수와 최소공배수
 
 <br>
 
@@ -555,7 +555,7 @@ function solution(num1, num2) {
 
 <br>
 
-### 1-30 약수의 개수와 덧셈
+## 1-30 약수의 개수와 덧셈
 
 <br>
 
@@ -592,7 +592,7 @@ function solution(left, right) {
 
 <br>
 
-### 1-31 같은 숫자는 싫어
+## 1-31 같은 숫자는 싫어
 
 <br>
 
@@ -606,7 +606,7 @@ function solution(arr) {
 
 <br>
 
-### 1-32 이상한 문자 만들기
+## 1-32 이상한 문자 만들기
 
 <br>
 
@@ -630,7 +630,7 @@ function solution(s) {
 
 <br>
 
-### 1-33 문자열 내 마음대로 정렬하기
+## 1-33 문자열 내 마음대로 정렬하기
 
 <br>
 
@@ -648,7 +648,7 @@ function solution(strings, n) {
 
 <br>
 
-### 1-34 3진법 뒤집기
+## 1-34 3진법 뒤집기
 
 <br>
 
@@ -662,7 +662,7 @@ function solution(n) {
 
 ### 배운 내용
 
-#### 10진수에서 n진수로 변환하는 방법
+### 10진수에서 n진수로 변환하는 방법
 
 ```javascript
 var decimal = 1023;
@@ -687,7 +687,7 @@ var decimal = parseInt(hex, 16); // 16진수에서 10진수로
 
 <br>
 
-### 1-35 예산
+## 1-35 예산
 
 <br>
 
@@ -708,7 +708,7 @@ function solution(d, budget) {
 
 <br>
 
-### 1-36 삼총사
+## 1-36 삼총사
 
 <br>
 
@@ -732,7 +732,7 @@ function solution(number) {
 
 <br>
 
-### 1-37 최소직사각형
+## 1-37 최소직사각형
 
 <br>
 
@@ -753,7 +753,7 @@ function solution(sizes) {
 
 <br>
 
-### 1-38 비밀지도
+## 1-38 비밀지도
 
 <br>
 
@@ -785,7 +785,7 @@ function solution(n, arr1, arr2) {
 
 <br>
 
-### 1-39 시저암호
+## 1-39 시저암호
 
 <br>
 
@@ -814,7 +814,7 @@ function solution(string, n) {
 
 <br>
 
-### 1-40 숫자 문자열과 영단어
+## 1-40 숫자 문자열과 영단어
 
 <br>
 
@@ -842,7 +842,7 @@ function solution(s) {
 
 <br>
 
-### 1-41 K번째수
+## 1-41 K번째수
 
 <br>
 
@@ -861,7 +861,7 @@ function solution(array, commands) {
 
 <br>
 
-### 1-42 크기가 작은 부분문자열
+## 1-42 크기가 작은 부분문자열
 
 <br>
 
@@ -880,7 +880,7 @@ function solution(t, p) {
 
 <br>
 
-### 1-43 두 개 뽑아서 더하기
+## 1-43 두 개 뽑아서 더하기
 
 <br>
 
@@ -920,7 +920,7 @@ function solution(numbers) {
 
 <br>
 
-### 1-44 콜라 문제
+## 1-44 콜라 문제
 
 <br>
 
@@ -954,7 +954,7 @@ function solution(a, b, n) {
 
 <br>
 
-### 1-45 푸드 파이트 대회
+## 1-45 푸드 파이트 대회
 
 <br>
 
@@ -997,7 +997,7 @@ function solution(food) {
 
 <br>
 
-### 1-46 가장 가까운 같은 글자
+## 1-46 가장 가까운 같은 글자
 
 <br>
 
@@ -1037,7 +1037,7 @@ const solution = (s) =>
 
 <br>
 
-### 1-47 2016년
+## 1-47 2016년
 
 <br>
 
@@ -1068,7 +1068,7 @@ function solution(a, b) {
 
 <br>
 
-### 1-48 모의고사
+## 1-48 모의고사
 
 <br>
 
@@ -1099,7 +1099,7 @@ function solution(answers) {
 
 <br>
 
-### 1-49 추억 점수
+## 1-49 추억 점수
 
 <br>
 
