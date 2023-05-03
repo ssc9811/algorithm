@@ -1096,3 +1096,50 @@ function solution(answers) {
   return answer;
 }
 ```
+
+<br>
+
+### 1-49 추억 점수
+
+<br>
+
+<img width="570" alt="image" src="https://user-images.githubusercontent.com/39263149/235940448-4ccb06fa-bee4-479b-81a6-4232d65ad08f.png">
+<img width="573" alt="image" src="https://user-images.githubusercontent.com/39263149/235940505-1f06385d-6f24-442a-83a0-89e12e60d3b7.png">
+
+```javascript
+function solution(name, yearning, photo) {
+  const newObj = name.reduce((acc, curr, idx) => {
+    acc[curr] = yearning[idx];
+    return acc;
+  }, new Object());
+
+  return photo.map((arr1) => {
+    let sum = 0;
+    arr1.map((item) => {
+      sum += Object.keys(newObj).includes(item) ? newObj[item] : 0;
+    });
+    return sum;
+  });
+}
+```
+
+### 다른 사람 풀이
+
+```javascript
+function solution(name, yearning, photo) {
+  let obj = {};
+  for (let i = 0; i < name.length; i++) {
+    obj[name[i]] = yearning[i];
+  }
+  return photo.map((value) =>
+    value.map((v) => (obj[v] ? obj[v] : 0)).reduce((acc, cur) => acc + cur, 0)
+  );
+}
+```
+
+### 느낀점
+
+```
+문제를 풀고자 했던 생각은 동일해서 다행이다
+reduce 활용이 너무 부족한 거 같다
+```
