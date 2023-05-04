@@ -1143,3 +1143,51 @@ function solution(name, yearning, photo) {
 문제를 풀고자 했던 생각은 동일해서 다행이다
 reduce 활용이 너무 부족한 거 같다
 ```
+
+<br>
+
+## 1-50 포켓몬
+
+<br>
+
+<img width="579" alt="image" src="https://user-images.githubusercontent.com/39263149/236124644-60885424-c6cf-4d71-b928-5c610f041938.png">
+<img width="568" alt="image" src="https://user-images.githubusercontent.com/39263149/236124670-9633dc57-a0ab-4fa4-881a-345f65722763.png">
+
+```javascript
+function solution(nums) {
+  const length = nums.length / 2;
+  const unique = nums.filter(
+    (num, index) => nums.indexOf(num) === index
+  ).length;
+
+  return unique > length ? length : unique;
+}
+```
+
+<br>
+
+### 배열 내 중복 제거 방법
+
+<hr>
+
+#### Set
+
+```javascript
+const arr = [...new Set(nums)];
+console.log(arr.length);
+
+const unique = new Set(nums);
+console.log(unique.size);
+
+console.log(arr.length === unique.size); // true
+```
+
+<br>
+
+#### indexOf(), filter()
+
+```javascript
+nums.filter((num, index) => nums.indexOf(num) === index);
+```
+
+<br>
