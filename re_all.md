@@ -1191,3 +1191,46 @@ nums.filter((num, index) => nums.indexOf(num) === index);
 ```
 
 <br>
+
+<br>
+
+## 1-51 소수 찾기
+
+<br>
+
+<img width="509" alt="image" src="https://user-images.githubusercontent.com/39263149/236388185-ec5fad86-9aa6-49e5-b2e4-b44b0552d81e.png">
+
+### 효용성 테스트 실패
+
+```javascript
+function solution(n) {
+  let answer = 0;
+  const isPrime = (num) => {
+    for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    answer += 1;
+  };
+
+  for (let i = 2; i <= n; i++) {
+    isPrime(i);
+  }
+  return answer;
+}
+```
+
+### 효용성 테스트 통과
+
+```javascript
+function solution(nums) {
+  const prime = new Array(nums + 1).fill(1);
+  let count = nums - 1;
+  for (let i = 2; i < Math.sqrt(nums); i++)
+    if (prime[i])
+      for (let j = i ** 2; j <= nums; j += i)
+        if (prime[j]) count--, (prime[j] = 0);
+  return count;
+}
+```
