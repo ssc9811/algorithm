@@ -1234,3 +1234,25 @@ function solution(nums) {
   return count;
 }
 ```
+
+<br>
+
+## 1-52 과일 장수
+
+<br>
+
+<img width="572" alt="image" src="https://user-images.githubusercontent.com/39263149/236712627-e77f4ffd-3cfe-4e5f-9cf9-16e0c3727829.png">
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/39263149/236712635-4b577c17-d2c9-4a32-832b-f3fef4c9a003.png">
+
+```javascript
+function solution(k, m, score) {
+  let answer = 0;
+  const scoreSorted = score.sort((a, b) => b - a);
+
+  for (let i = m - 1; i < scoreSorted.length; i += m) {
+    answer += scoreSorted[i] * m;
+  }
+
+  return answer;
+}
+```
