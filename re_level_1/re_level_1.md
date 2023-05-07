@@ -52,3 +52,4 @@
 1. [포켓몬](./%ED%8F%AC%EC%BC%93%EB%AA%AC.md)
 1. [소수 찾기](./%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.md)
 1. [과일 장수](./%EA%B3%BC%EC%9D%BC%20%EC%9E%A5%EC%88%98.md)
+1. [소수 만들기](./%EC%86%8C%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)

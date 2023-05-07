@@ -1256,3 +1256,33 @@ function solution(k, m, score) {
   return answer;
 }
 ```
+
+<br>
+
+## 1-53 소수 만들기
+
+<br>
+
+<img width="571" alt="image" src="https://user-images.githubusercontent.com/39263149/236714257-c8da4a16-c163-43d9-88aa-e53edfbb670a.png">
+
+```javascript
+function solution(nums) {
+  let answer = 0;
+  const isPrime = (num) => {
+    for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    answer += 1;
+  };
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      for (let k = j + 1; k < nums.length; k++) {
+        isPrime(nums[i] + nums[j] + nums[k]);
+      }
+    }
+  }
+  return answer;
+}
+```
