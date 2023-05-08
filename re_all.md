@@ -1286,3 +1286,32 @@ function solution(nums) {
   return answer;
 }
 ```
+
+<br>
+
+## 1-54 명예의 전당
+
+<br>
+
+<img width="569" alt="image" src="https://user-images.githubusercontent.com/39263149/236718513-802e89b3-98cc-4a3a-b39f-6aeb8d52d753.png">
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/39263149/236718602-25b5543c-8c00-4450-b365-a2d23a46fbc2.png">
+
+```javascript
+function solution(k, score) {
+  const scoreBoard = [];
+  const answer = [];
+  for (let i = 0; i < score.length; i++) {
+    if (i <= k - 1) {
+      scoreBoard.push(score[i]);
+    } else {
+      if (scoreBoard[k - 1] < score[i]) {
+        scoreBoard.pop();
+        scoreBoard.push(score[i]);
+      }
+    }
+    scoreBoard.sort((a, b) => b - a);
+    answer.push(Math.min(...scoreBoard));
+  }
+  return answer;
+}
+```
