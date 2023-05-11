@@ -1417,7 +1417,7 @@ function solution(dartResult) {
 
 <br>
 
-## 1-49 다트 게임
+## 1-49 로또의 최고 순의와 최저 순위
 
 <br>
 
