@@ -1386,3 +1386,74 @@ function solution(cards1, cards2, goal) {
   return "Yes";
 }
 ```
+
+<br>
+
+## 1-57 다트 게임
+
+<br>
+
+<img width="567" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/ea76db4e-d919-427f-acb1-03bc03adfa81">
+<img width="563" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/493feb39-6d01-4eb9-8746-9b47ebbb27e3">
+<img width="486" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/748fbd84-1e0e-4ba2-997f-7440d9e8652a">
+
+```javascript
+function solution(dartResult) {
+  const point = [];
+  const bonus = [];
+  const score = [];
+
+  for (let i = 0; i < 3; i++) {
+    // point 찾기
+    point.push(parseInt(dartResult));
+    dartResult = dartResult.slice(String(point[i]).length);
+
+    // bonus 찾기
+    switch (dartResult[0]) {
+      case "S":
+        bonus[i] = 1;
+        dartResult = dartResult.slice(1);
+        break;
+      case "D":
+        bonus[i] = 2;
+        dartResult = dartResult.slice(1);
+        break;
+      case "T":
+        bonus[i] = 3;
+        dartResult = dartResult.slice(1);
+        break;
+    }
+
+    // 제곱 처리
+    score[i] = point[i] ** bonus[i];
+
+    // option 처리
+    if (dartResult[0] === "#" || dartResult[0] === "*") {
+      if (dartResult[0] === "#") {
+        score[i] = score[i] * -1;
+      } else {
+        if (score[i - 1]) {
+          score[i - 1] = score[i - 1] * 2;
+        }
+        score[i] = score[i] * 2;
+      }
+      dartResult = dartResult.slice(1);
+    }
+  }
+
+  return score.reduce((acc, cur) => (acc += cur));
+}
+```
+
+### 느낀점
+
+```
+알고리즘을 멋잇게 풀어야만 된다고 생각했다.
+조금 더 쉬운, 코드를 더 줄일 수 있는 방법을 생각하다 보니 더 어렵게 느껴졌던 것 같다.
+
+내가 알고 있는 범위 내에서 최대한 해결해보고, 어려우면 그때 더 공부를 하는 방식이 맞다는걸 이 문제를 통해 느꼈다
+
+처음 생각했던 방식 (위 풀이)이 너무 하드 코딩이라고 생각하고 다른 방법을 찾아보려 애를 쓴게 시간을 더 잡아먹었다.
+
+-> 정규식은 공부할 필요가 있다
+```
