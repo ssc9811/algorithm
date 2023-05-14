@@ -1541,3 +1541,50 @@ function solution(number, limit, power) {
   return answer;
 }
 ```
+
+<br>
+
+## 1-60 로또의 최고 순위와 최저 순위
+
+<br>
+
+<img width="577" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/cdf38e26-159c-488c-96ec-8c2251cf6005">
+<img width="575" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/601bbeb5-0860-46a6-825b-49c861cf5584">
+<img width="572" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/ffcf930e-dc00-4609-9728-4f622f86658d">
+
+```javascript
+function solution(lottos, win_nums) {
+  const rankObj = {
+    6: 1,
+    5: 2,
+    4: 3,
+    3: 4,
+    2: 5,
+    1: 6,
+    0: 6,
+  };
+
+  const zeroCount = lottos.reduce((acc, cur) => {
+    if (cur === 0) return (acc += 1);
+    return acc;
+  }, 0);
+  const correctNumLength = win_nums
+    .sort((a, b) => b - a)
+    .filter((win_num) => lottos.includes(win_num)).length;
+
+  return [rankObj[correctNumLength + zeroCount], rankObj[correctNumLength]];
+}
+```
+
+```javascript
+function solution(lottos, win_nums) {
+  const rank = [6, 6, 5, 4, 3, 2, 1];
+
+  let minCount = lottos.filter((v) => win_nums.includes(v)).length;
+  let zeroCount = lottos.filter((v) => !v).length;
+
+  const maxCount = minCount + zeroCount;
+
+  return [rank[maxCount], rank[minCount]];
+}
+```
