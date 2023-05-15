@@ -1,3 +1,20 @@
+# 0단계 문제
+
+<br>
+
+## 0-1 특정 문자열로 끝나는 가장 긴 부분 문자열 찾기
+
+<br>
+
+<img width="575" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/420163fc-a995-483c-81f4-31acdcf8baf2">
+<img width="570" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/b60bd4f5-bef1-44f8-bde1-81fb70225cf0">
+
+```javascript
+function solution(myString, pat) {
+  return myString.slice(0, myString.lastIndexOf(pat) + pat.length);
+}
+```
+
 # 1단계 문제
 
 <br>
@@ -1578,13 +1595,13 @@ function solution(lottos, win_nums) {
 
 ```javascript
 function solution(lottos, win_nums) {
-  const rank = [6, 6, 5, 4, 3, 2, 1];
+  const answer = [6, 6, 5, 4, 3, 2, 1];
 
-  let minCount = lottos.filter((v) => win_nums.includes(v)).length;
-  let zeroCount = lottos.filter((v) => !v).length;
+  const matchedCount = lottos.filter((lotto) =>
+    win_nums.includes(lotto)
+  ).length;
+  const zeroCount = lottos.filter((lotto) => !lotto).length;
 
-  const maxCount = minCount + zeroCount;
-
-  return [rank[maxCount], rank[minCount]];
+  return [answer[matchedCount + zeroCount], answer[matchedCount]];
 }
 ```
