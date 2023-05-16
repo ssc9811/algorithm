@@ -1605,3 +1605,32 @@ function solution(lottos, win_nums) {
   return [answer[matchedCount + zeroCount], answer[matchedCount]];
 }
 ```
+
+<br>
+
+## 1-61 숫자 짝궁
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/d617598b-d45b-45a2-90a1-def18a0d0f79)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/b08a826a-4178-42f5-8a5d-a903d797dd85)
+
+```javascript
+function solution(X, Y) {
+  let answer = "";
+  X = X.split("");
+  Y = Y.split("");
+
+  for (let i = 0; i < 10; i++) {
+    const curX = X.filter((a) => Number(a) === i).length;
+    const curY = Y.filter((a) => Number(a) === i).length;
+    answer += String(i).repeat(Math.min(curX, curY));
+  }
+  if (answer === "") return "-1";
+  if (Number(answer) === 0) return "0";
+  return answer
+    .split("")
+    .sort((a, b) => Number(b) - Number(a))
+    .join("");
+}
+```
