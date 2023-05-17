@@ -1634,3 +1634,36 @@ function solution(X, Y) {
     .join("");
 }
 ```
+
+<br>
+
+## 1-62 체육복
+
+<br>
+
+<img width="570" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/0713de8a-4f65-46ab-907f-c7198ed00576">
+<img width="565" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/f45ddbdd-fdf1-486c-935f-71ab252f2c04">
+
+```javascript
+function solution(n, lost, reserve) {
+  const newReserve = reserve
+    .filter((student) => !lost.includes(student))
+    .sort((a, b) => b - a);
+  lost = lost
+    .filter((student) => !reserve.includes(student))
+    .sort((a, b) => b - a);
+
+  let answer = n - lost.length;
+
+  for (let i = 0; i < newReserve.length; i++) {
+    for (let j = 0; j < lost.length; j++) {
+      if (Math.abs(newReserve[i] - lost[j]) === 1) {
+        answer += 1;
+        i++;
+      }
+    }
+  }
+
+  return answer;
+}
+```
