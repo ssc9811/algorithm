@@ -1667,3 +1667,37 @@ function solution(n, lost, reserve) {
   return answer;
 }
 ```
+
+<br>
+
+## 1-63 옹알이
+
+<br>
+
+<img width="564" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/860305cb-8d18-4019-9655-9740d848d1a7">
+<img width="575" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/c0fcfe4c-7fa0-4f3e-9848-45afe69618cf">
+
+```javascript
+function solution(babbling) {
+  const can = ["aya", "ye", "woo", "ma"];
+  let count = 0;
+
+  for (let i = 0; i < babbling.length; i++) {
+    let babble = babbling[i];
+
+    for (let j = 0; j < can.length; j++) {
+      if (babble.includes(can[j].repeat(2))) {
+        break;
+      }
+
+      babble = babble.split(can[j]).join(" ");
+    }
+
+    if (babble.split(" ").join("").length === 0) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+```
