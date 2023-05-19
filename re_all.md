@@ -1701,3 +1701,28 @@ function solution(babbling) {
   return count;
 }
 ```
+
+<br>
+
+## 1-64 완주하지 못한 선수
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5213651c-d831-4471-8885-03f5807c078c)
+
+```javascript
+function solution(participant, completion) {
+  let result = "";
+  participant = participant.sort();
+  completion = completion.sort();
+
+  for (let i in participant) {
+    if (participant[i] !== completion[i]) {
+      result = participant[i];
+      break;
+    }
+  }
+
+  return result;
+}
+```
