@@ -1831,3 +1831,54 @@ function solution(numbers, hand) {
   return answer;
 }
 ```
+
+<br>
+
+## 1-67 둘만의 암호
+
+<br>
+
+<img width="566" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/70402e57-c06f-468e-8674-f74484837067"></img>
+
+```javascript
+function solution(words, skip, index) {
+  const answer = [];
+  const check = (word) => {
+    const toUnicode = word.charCodeAt();
+    let lastChar = "";
+    let initIndex = index;
+
+    for (let i = 1; i <= initIndex; i++) {
+      if (
+        skip.includes(
+          String.fromCharCode(
+            toUnicode + i > 122
+              ? toUnicode + i - 26 > 122
+                ? toUnicode + i - 52
+                : toUnicode + i - 26
+              : toUnicode + i
+          )
+        )
+      ) {
+        initIndex += 1;
+      } else {
+        lastChar = String.fromCharCode(
+          toUnicode + i > 122
+            ? toUnicode + i - 26 > 122
+              ? toUnicode + i - 52
+              : toUnicode + i - 26
+            : toUnicode + i
+        );
+      }
+    }
+
+    return lastChar;
+  };
+
+  words.split("").map((word) => {
+    answer.push(check(word));
+  });
+
+  return answer.join("");
+}
+```
