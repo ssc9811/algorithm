@@ -18,7 +18,7 @@
 >
 > ### [전체 문제](./baekjoon_all.md)
 >
-> ### [입출력과 사칙연산](./baekjoon_step1.md)
+> ### [입출력과 사칙연산](./baekjoon/step1/step1_all.md)
 
 <br>
 <hr />
