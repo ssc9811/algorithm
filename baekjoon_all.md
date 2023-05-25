@@ -236,3 +236,197 @@ console.log(`|\\_/|
 ```
 
 </blockquote>
+<br>
+<br>
+
+## 조건문
+
+<blockquote>
+<br>
+
+### 두 수 비교하기
+
+<br>
+
+<img width="1036" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/b3da0440-c923-4dc7-bef9-5264c7e035a4">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .split(" ")
+  .map((v) => +v);
+
+const [a, b] = inputs;
+
+if (a > b) {
+  console.log(">");
+} else if (a < b) {
+  console.log("<");
+} else {
+  console.log("==");
+}
+```
+
+<br>
+
+### 시험 성적
+
+<br>
+
+<img width="1038" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/9138d2c9-dd4b-4a41-9de6-1351c64c4faa">
+
+```javascript
+const score = require("fs").readFileSync("/dev/stdin").toString();
+
+if (score >= 90) {
+  console.log("A");
+} else if (score >= 80) {
+  console.log("B");
+} else if (score >= 70) {
+  console.log("C");
+} else if (score >= 60) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+```
+
+<br>
+
+### 윤년
+
+<br>
+
+<img width="1036" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/a307ae7d-0019-46e8-be00-4f61147587dc">
+
+```javascript
+const year = Number(require("fs").readFileSync("/dev/stdin").toString());
+
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+  console.log(1);
+} else {
+  console.log(0);
+}
+```
+
+<br>
+
+### 사분면
+
+<br>
+
+<img width="1037" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/11dba8ca-c539-48cf-a7c8-62fecb4d70fb">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync(0)
+  .toString()
+  .trim()
+  .split("\n")
+  .map(Number);
+const [x, y] = inputs;
+
+if (x > 0) y > 0 ? console.log(1) : console.log(4);
+if (x < 0) y > 0 ? console.log(2) : console.log(3);
+```
+
+<br>
+
+### 알람 시계
+
+<br>
+
+<img width="1036" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/ccc6bac3-419f-4e85-859c-0ad54c2c579d">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .split(" ")
+  .map((v) => +v);
+let [h, m] = inputs;
+
+m -= 45;
+
+if (m < 0) {
+  m += 60;
+  h--;
+  if (h === -1) {
+    h = 23;
+  }
+}
+console.log(h + " " + m);
+```
+
+<br>
+
+### 오븐 시계
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/f8afec7d-7387-46c2-92f3-3ab51442b590)
+
+```javascript
+const fs = require("fs");
+let input = fs.readFileSync("/dev/stdin").toString().split("\n");
+
+let h = input[0].split(" ")[0];
+let m = input[0].split(" ")[1];
+let t = input[1];
+
+x(+h, +m, +t);
+
+function x(hh, mm, tt) {
+  mm += tt;
+
+  while (mm >= 60) {
+    mm -= 60;
+    hh += 1;
+  }
+  while (hh >= 24) {
+    hh -= 24;
+  }
+
+  console.log(hh, mm);
+}
+```
+
+<br>
+
+### 주사위 세개
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/f44f7117-93c9-4e33-b200-12ea13b3bcc0)
+
+```javascript
+const input = require("fs")
+  .readFileSync("dev/stdin")
+  .toString()
+  .split(" ")
+  .map((x) => +x);
+
+const [a, b, c] = input;
+M = Math.max(...input);
+
+const x = (a, b, c, M) => {
+  if (a == b && b == c && a == c) {
+    console.log(10000 + a * 1000);
+  }
+  if (a !== b || a !== c || b !== c) {
+    if (a == b || a == c) {
+      console.log(1000 + a * 100);
+    }
+    if (b == c) {
+      console.log(1000 + b * 100);
+    }
+  }
+  if (a !== b && a !== c && b !== c) {
+    console.log(M * 100);
+  }
+};
+x(a, b, c, M);
+```
+
+</blockquote>
