@@ -16,9 +16,15 @@
 >
 > ## [백준 단계별로 풀어보기](https://www.acmicpc.net/step)
 >
-> ### [전체 문제](./baekjoon_all.md)
+> ### [단계별로 풀어보기 전체 문제](./baekjoon_all.md)
 >
-> ### [입출력과 사칙연산](./baekjoon/step1/step1_all.md)
+> <br>
+>
+> ### [1. 입출력과 사칙연산](./baekjoon/step1/step1_all.md)
+>
+> ### [2. 조건문](./baekjoon/step2/step2_all.md)
+>
+> ### [3. 반복문](./baekjoon/step3/step3_all.md)
 
 <br>
 <hr />
