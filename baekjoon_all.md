@@ -430,3 +430,235 @@ x(a, b, c, M);
 ```
 
 </blockquote>
+<br>
+<br>
+
+## 반복문
+
+<blockquote>
+<br>
+
+### 구구단
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/359208be-0361-4776-8d1b-eb3bdcf4e2de)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString();
+
+for (let i = 1; i <= 9; i++) {
+  console.log(`${+input} * ${i} = ${+input * i}`);
+}
+```
+
+<br>
+
+### A+B - 3
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5ba4bb73-1db5-4d14-b59d-72d61e21b835)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+
+for (let i = 1; i <= input[0]; i++) {
+  let numbers = input[i].split(" ");
+  console.log(+numbers[0] + +numbers[1]);
+}
+```
+
+<br>
+
+### 합
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/efccf253-7f5a-4aa7-9834-69d4022a6e1a)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString();
+
+let answer = 0;
+for (let i = 1; i <= input; i++) {
+  answer += i;
+}
+
+console.log(answer);
+```
+
+<br>
+
+### 영수증
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/135fdc88-e7ed-43d0-b3d3-31bc58c12a03)
+
+```javascript
+const inputs = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+let sum = inputs[0];
+const count = inputs[1];
+
+for (let i = 1; i <= count; i++) {
+  let numbers = inputs[i + 1].split(" ");
+  sum -= numbers[0] * numbers[1];
+}
+
+sum === 0 ? console.log("Yes") : console.log("No");
+```
+
+<br>
+
+### 코딩은 체육과목 입니다
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/dfafe3d9-b25f-4783-9268-ac795b3beb25)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/a5bda9f7-2ad0-4658-a406-beed41a74e61)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString();
+
+const n = input / 4;
+
+console.log(`${"long ".repeat(n)}int`);
+```
+
+<br>
+
+### 빠른 A+B
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/b4f1149c-6fae-4e1e-8e30-818a865f0033)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/c7324457-9905-4368-a032-5c5141480577)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+
+let answer = "";
+
+for (let i = 1; i <= input[0]; i++) {
+  let numbers = input[i].split(" ");
+  answer +=
+    i === 1
+      ? `${Number(numbers[0]) + Number(numbers[1])}`
+      : `\n${Number(numbers[0]) + Number(numbers[1])}`;
+}
+
+console.log(answer);
+```
+
+<br>
+
+### A+B - 7
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/e2dcef21-689f-4465-9c91-6b1326a3bc6a)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+
+for (let i = 1; i <= input[0]; i++) {
+  let numbers = input[i].split(" ");
+  console.log(`Case #${i}: ${+numbers[0] + +numbers[1]}`);
+}
+```
+
+<br>
+
+### A+B - 8
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/bf04e04f-1ac5-4198-aa3b-1017a87a04eb)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+
+for (let i = 1; i <= input[0]; i++) {
+  let numbers = input[i].split(" ");
+  console.log(
+    `Case #${i}: ${+numbers[0]} + ${+numbers[1]} = ${+numbers[0] + +numbers[1]}`
+  );
+}
+```
+
+<br>
+
+### 별찍기 - 1
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8e0261de-df68-4619-b07a-a8f67789dc72)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString();
+
+for (let i = 1; i <= input; i++) {
+  console.log("*".repeat(i));
+}
+```
+
+<br>
+
+### 별찍기 - 2
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8ccdcc6a-9d8e-4ac6-bf36-26867b37269f)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString();
+
+for (let i = 1; i <= input; i++) {
+  console.log("*".repeat(i).padStart(input));
+}
+```
+
+<br>
+
+### A+B - 5
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/010aa0b3-885a-40ed-9752-53ff5c5a06da)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+for (let i = 0; i < inputs.length - 1; i++) {
+  const numbers = inputs[i].split(" ");
+  console.log(+numbers[0] + +numbers[1]);
+}
+```
+
+<br>
+
+### A+B - 4
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/9c9b8bd6-7e7f-425e-af9a-5dbd52fcef2d)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+for (let i = 0; i < inputs.length; i++) {
+  const numbers = inputs[i].split(" ");
+  console.log(+numbers[0] + +numbers[1]);
+}
+```
+
+</blockquote>
