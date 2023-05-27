@@ -662,3 +662,229 @@ for (let i = 0; i < inputs.length; i++) {
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 1차원 배열
+
+<blockquote>
+<br>
+
+### 개수 세기
+
+<br>
+
+<img width="1039" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/cae2957a-3874-4024-8405-aea547e4646d">
+
+```javascript
+const inputs = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+console.log(inputs[1].split(" ").filter((item) => item === inputs[2]).length);
+```
+
+<br>
+
+### X보다 작은 수
+
+<br>
+
+<img width="1040" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/46281c78-1776-4e01-a7d5-19b653bfcea3">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+const [n, item] = inputs;
+const max = n.split(" ")[1];
+console.log(
+  item
+    .split(" ")
+    .filter((item) => +item < +max)
+    .join(" ")
+);
+```
+
+<br>
+
+### 최소, 최대
+
+<br>
+
+<img width="1037" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/50727a1f-652e-41ed-8092-36e9ba6a77e2">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+const arr = inputs[1].split(" ").map((v) => +v);
+console.log(Math.min(Math.min(...arr)), Math.max(Math.max(...arr)));
+```
+
+<br>
+
+### 최댓값
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8eca0031-bf88-48b7-b7cd-fbf0aa21c1b8)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+let max = inputs[0];
+let index = 0;
+for (let i = 0; i < inputs.length; i++) {
+  if (max < inputs[i]) {
+    max = inputs[i];
+    index = i;
+  }
+}
+
+console.log(max);
+console.log(index + 1);
+```
+
+<br>
+
+### 공 넣기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/b24d76cf-2414-4594-8201-8ab0fac71043)
+
+```javascript
+const [[n, m], ...example] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((x) => x.split(" ").map((v) => +v));
+
+let baskets = new Array(n).fill(0);
+for (let [i, j, ball] of example) {
+  for (let x = i; x <= j; x++) {
+    baskets[x - 1] = ball;
+  }
+}
+
+console.log(baskets.join(" "));
+```
+
+<br>
+
+### 공 바꾸기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/71108439-177a-4f26-a75f-240d09991914)
+
+```javascript
+const [[n, m], ...example] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((x) => x.split(" ").map((v) => +v));
+
+let basket = [];
+
+for (let i = 1; i <= n; i++) {
+  basket.push(i);
+}
+
+example.forEach((item) => {
+  const [i, j] = item;
+  let temp = basket[i - 1];
+  basket[i - 1] = basket[j - 1];
+  basket[j - 1] = temp;
+});
+
+console.log(basket.join(" "));
+```
+
+<br>
+
+### 과제 안 내신 분..?
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/1bbb2a92-5159-484a-a885-64d960809bd1)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+const answer = [];
+
+for (let i = 1; i < 31; i++) {
+  if (!inputs.includes(i)) {
+    answer.push(i);
+  }
+}
+console.log(Math.min(...answer));
+console.log(Math.max(...answer));
+```
+
+<br>
+
+### 나머지
+
+<br>
+
+<img width="1032" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/883ed5be-3f67-4bbf-8484-846002fbb137">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+const answer = [];
+
+inputs.map((item) => answer.push(item % 42));
+
+console.log(new Set(answer).size);
+```
+
+---
+
+<br>
+
+### 평균
+
+<br>
+
+<img width="1032" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/455a398b-d77a-4fa5-8b25-f8e330513d27">
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+const scores = inputs[1].split(" ");
+const max = Math.max(...scores);
+console.log(
+  scores.reduce((acc, cur) => (acc += (cur / max) * 100), 0) / inputs[0]
+);
+```
+
+</blockquote>
