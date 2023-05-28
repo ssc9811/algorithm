@@ -1,22 +1,19 @@
-const [[n, m], ...example] = require("fs")
+const [[N, M], ...example] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
   .split("\n")
   .map((x) => x.split(" ").map((v) => +v));
 
-let basket = [];
+const baskets = Array.from({ length: N }, (v, i) => i + 1);
 
-for (let i = 1; i <= n; i++) {
-  basket.push(i);
-}
-
-for (let [i, j] of example) {
-  for (let idx = i; idx <= (i + j) / 2; idx++) {
-    console.log(idx);
-    let bak = basket[idx];
-    basket[idx] = basket[j - idx + i];
-    basket[j - idx + i] = bak;
+example.forEach((item) => {
+  const [i, j] = item;
+  const arr = [];
+  for (let k = i - 1; k < j; k++) {
+    arr.push(baskets[k]);
   }
-}
-console.log(basket.join(" "));
+  arr.reverse();
+  baskets.splice(i - 1, j - i + 1, ...arr);
+});
+console.log(baskets.join(" "));

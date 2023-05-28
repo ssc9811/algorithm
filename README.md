@@ -25,6 +25,10 @@
 > ### [2. 조건문](./baekjoon/step2/step2_all.md)
 >
 > ### [3. 반복문](./baekjoon/step3/step3_all.md)
+>
+> ### [4. 1차원 배열](./baekjoon/step4/step4_all.md)
+>
+> ### [5. 문자열](./baekjoon/step5/step5_all.md)
 
 <br>
 <hr />

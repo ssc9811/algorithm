@@ -888,3 +888,262 @@ console.log(
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 문자열
+
+<blockquote>
+<br>
+
+### 문자와 문자열
+
+<br>
+
+<img width="1043" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/f36ad5e6-c703-457b-a7ab-81f3214a5520">
+
+```javascript
+const [word, order] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .split("\n");
+console.log(word[order - 1]);
+```
+
+<br>
+
+### 단어 길이 재기
+
+<br>
+
+<img width="1039" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/f85fbad1-72b6-4c31-8429-88ce56605c39">
+
+```javascript
+const word = require("fs").readFileSync("/dev/stdin").toString().trim();
+console.log(word.length);
+```
+
+<br>
+
+### 문자열
+
+<br>
+
+<img width="1034" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/bd323300-8aad-4221-ad4d-2a8bb3b50693">
+
+```javascript
+const [count, ...strings] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+strings.forEach((string) => console.log(string[0] + string[string.length - 1]));
+```
+
+<br>
+
+### 아스키 코드
+
+<br>
+
+<img width="1035" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/267eb168-3bdf-418a-895c-5f1d20735193">
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+console.log(input.charCodeAt(0));
+```
+
+<br>
+
+### 숫자의 합
+
+<br>
+
+<img width="1034" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/f0cd693e-67ba-43b1-9201-94532a694407">
+
+```javascript
+const [count, string] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+console.log(string.split("").reduce((acc, cur) => (acc += +cur), 0));
+```
+
+<br>
+
+### 알파벳 찾기
+
+<br>
+
+<img width="1043" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/b7402944-848c-4d0d-bd18-446168c8bd04">
+
+```javascript
+const word = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+const alphabetArray = Array.from({ length: 26 }, (_, i) =>
+  String.fromCharCode(97 + i)
+);
+
+let answer = "";
+for (let alphabet of alphabetArray) {
+  answer += `${word.indexOf(alphabet)} `;
+}
+console.log(answer);
+```
+
+### 수정
+
+```javascript
+const word = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+const alphabetArray = Array.from({ length: 26 }, (_, i) =>
+  word.indexOf(String.fromCharCode(97 + i))
+);
+
+console.log(alphabetArray.join(" "));
+```
+
+<br>
+
+### 문자열 반복
+
+<br>
+
+<img width="1033" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/eac69d8b-4c5d-4f65-b73a-6b529cd84b87">
+
+```javascript
+const [T, ...RnT] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+RnT.forEach((item) => {
+  const [R, T] = item.split(" ");
+  let answer = "";
+  for (let t in T) {
+    answer += T[t].repeat(R);
+  }
+  console.log(answer);
+});
+```
+
+<br>
+
+### 단어의 개수
+
+<br>
+
+<img width="1037" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/f6fb3c1c-ffb4-455c-9088-183eaf2eb8fe">
+
+```javascript
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ");
+
+console.log(input[0] === "" ? 0 : input.length);
+```
+
+<br>
+
+### 상수
+
+<br>
+
+<img width="1037" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/ca563531-6e14-4a15-a067-a04c710cf55a">
+
+```javascript
+const [a, b] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ");
+
+const A = a.split("").reverse().join("");
+const B = b.split("").reverse().join("");
+
+console.log(A > B ? A : B);
+```
+
+### 수정
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((input) => input.split("").reverse().join("") * 1);
+
+console.log(Math.max(...inputs));
+```
+
+<br>
+
+### 다이얼
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/37268956-d7f8-4f61-b972-a6006a58d499)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/9be49f87-63e3-44ba-9708-eacc319f9059)
+
+```javascript
+const [...inputs] = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+const dial = {
+  A: 2,
+  B: 2,
+  C: 2,
+  D: 3,
+  E: 3,
+  F: 3,
+  G: 4,
+  H: 4,
+  I: 4,
+  J: 5,
+  K: 5,
+  L: 5,
+  M: 6,
+  N: 6,
+  O: 6,
+  P: 7,
+  Q: 7,
+  R: 7,
+  S: 7,
+  T: 8,
+  U: 8,
+  V: 8,
+  W: 9,
+  X: 9,
+  Y: 9,
+  Z: 9,
+};
+let answer = 0;
+for (let char of inputs) {
+  answer += dial[char] + 1;
+}
+
+console.log(answer);
+```
+
+<br>
+
+### 그대로 출력하기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/782227d2-a40f-48dd-b740-dd7ff29f4b59)
+
+```javascript
+const inputs = require("fs").readFileSync("/dev/stdin").toString();
+console.log(inputs);
+```
+
+</blockquote>
