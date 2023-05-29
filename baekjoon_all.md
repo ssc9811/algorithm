@@ -1147,3 +1147,94 @@ console.log(inputs);
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 심화 1
+
+<blockquote>
+<br>
+
+<br>
+
+### 새싹
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/0cd4056e-60e3-4e88-88d9-a2064d96c06d)
+
+```javascript
+console.log(`         ,r'"7
+r\`-_   ,'  ,/
+ \\. ". L_r'
+   \`~\\/
+      |
+      |`);
+```
+
+<br>
+
+### 킹, 퀸, 룩, 비숍, 나이트, 폰
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/28924d70-cf2b-448a-af50-dea4472eda6f)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
+
+const count = [1, 1, 2, 2, 2, 8];
+
+console.log(count.map((item, index) => item - inputs[index]).join(" "));
+```
+
+<br>
+
+### 별 찍기 - 7
+
+<br>
+
+<img width="1041" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/8881efb7-6092-4395-9574-b4e4a2379cec">
+
+### 출력 오류 - vscode에선 답으로 나온다
+
+```javascript
+const n = Number(require("fs").readFileSync("/dev/stdin").toString().trim());
+
+for (let i = n - 1; i >= 0; i--) {
+  let top = `${" ".repeat(i)}${"*".repeat(n - i + (n - i - 1))}${" ".repeat(
+    i
+  )}`;
+  console.log(top);
+}
+for (let i = 1; i <= n - 1; i++) {
+  let bottom = `${" ".repeat(i)}${"*".repeat(n - i + (n - i - 1))}${" ".repeat(
+    i
+  )}`;
+  console.log(bottom);
+}
+```
+
+```javascript
+const N = Number(require("fs").readFileSync("/dev/stdin").toString().trim());
+
+for (let i = 1; i < N; i++) {
+  let blank = " ".repeat(N - i);
+  let stars = "*".repeat(i + (i - 1));
+  console.log(blank + stars);
+}
+
+for (let j = N; j > 0; j--) {
+  let blank = " ".repeat(N - j);
+  let stars = "*".repeat(j + (j - 1));
+  console.log(blank + stars);
+}
+```
+
+</blockquote>
