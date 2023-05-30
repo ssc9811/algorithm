@@ -1237,4 +1237,55 @@ for (let j = N; j > 0; j--) {
 }
 ```
 
+<br>
+
+### 팰린드롬인지 확인하기
+
+<br>
+
+<img width="1039" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/414aef24-da58-4424-831b-eccfbf17e5b6">
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+console.log(input.split("").reverse().join("") === input ? 1 : 0);
+```
+
+<br>
+
+### 단어 공부
+
+<br>
+
+<img width="1056" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/aebe9a5c-9c2a-4603-a36e-c7bc9a809a9d">
+
+```javascript
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .toLowerCase()
+  .trim()
+  .split("")
+  .sort();
+
+const obj = {};
+
+input.forEach((item) => {
+  if (obj[item]) {
+    obj[item] += 1;
+  } else {
+    obj[item] = 1;
+  }
+});
+
+const maxCount = Math.max(...Object.values(obj));
+console.log(
+  Object.values(obj).filter((item) => item === maxCount).length > 1
+    ? "?"
+    : Object.keys(obj)
+        .find((key) => obj[key] === maxCount)
+        .toUpperCase()
+);
+```
+
 </blockquote>
