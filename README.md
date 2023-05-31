@@ -29,6 +29,8 @@
 > ### [4. 1차원 배열](./baekjoon/step4/step4_all.md)
 >
 > ### [5. 문자열](./baekjoon/step5/step5_all.md)
+>
+> ### [6. 심화1](./baekjoon/step6/step6_all.md)
 
 <br>
 <hr />

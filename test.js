@@ -1,26 +1,12 @@
-const input = require("fs")
+let input = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
-  .toLowerCase()
-  .trim()
-  .split("")
-  .sort();
+  .trim();
 
-const obj = {};
+const arr = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
 
-input.forEach((item) => {
-  if (obj[item]) {
-    obj[item] += 1;
-  } else {
-    obj[item] = 1;
-  }
-});
+for (let x of arr) {
+  input = input.replace(new RegExp(x, "g"), " ");
+}
 
-const maxCount = Math.max(...Object.values(obj));
-console.log(
-  Object.values(obj).filter((item) => item === maxCount).length > 1
-    ? "?"
-    : Object.keys(obj)
-        .find((key) => obj[key] === maxCount)
-        .toUpperCase()
-);
+console.log(input.length);
