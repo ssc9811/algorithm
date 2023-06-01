@@ -1288,4 +1288,128 @@ console.log(
 );
 ```
 
+<br>
+
+### 평균은 넘겠지
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8ee5178e-cd81-4b37-a825-88c9dbf80bf4)
+
+```javascript
+const [[n], ...lists] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((v) => +v));
+
+lists.forEach((list) => {
+  const [t, ...scores] = list;
+  let sum = scores.reduce((acc, cur) => (acc += cur), 0);
+  console.log(
+    ((scores.filter((score) => score > sum / t).length / t) * 100).toFixed(3) +
+      "%"
+  );
+});
+```
+
+<br>
+
+### 크로아티아 알파뱃
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/468b25f0-57fc-4192-9db9-96c1243fbba2)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/bc00190e-b5ec-449e-8a7c-e0e40b0440e8)
+
+```javascript
+let input = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+const arr = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
+
+for (let x of arr) {
+  input = input.replace(new RegExp(x, "g"), " ");
+}
+
+console.log(input.length);
+```
+
+<br>
+
+### 그룹 단어 체커
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/29656b8d-56f1-4356-9b97-68546e32370a)
+
+```javascript
+let [n, ...strings] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+let answer = 0;
+
+for (let str of strings) {
+  let arr = [];
+  group = true;
+  for (let x of str) {
+    if (arr.indexOf(x) === -1) {
+      arr.push(x);
+    } else if (arr[arr.length - 1] !== x) {
+      group = false;
+      break;
+    }
+  }
+  if (group) answer += 1;
+}
+
+console.log(answer);
+```
+
+<br>
+
+### 너의 평점은
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5d8ecd5c-9cd8-408d-8797-344c3011e5fc)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/ac493b73-2d09-4cf0-9b39-eb76077ccc63)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/85e3c657-40cb-4306-bb65-dfcf6c95d178)
+
+```javascript
+const gradeObj = {
+  "A+": 4.5,
+  A0: 4.0,
+  "B+": 3.5,
+  B0: 3.0,
+  "C+": 2.5,
+  C0: 2.0,
+  "D+": 1.5,
+  D0: 1.0,
+  F: 0.0,
+  P: 0.0,
+};
+
+let input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" "));
+
+let s = 0;
+let t = 0;
+
+for (let [a, b, c] of input) {
+  if (c === "P") continue;
+  s += b * 1;
+  t += b * gradeObj[c];
+}
+
+console.log((t / s).toFixed(6));
+```
+
 </blockquote>
