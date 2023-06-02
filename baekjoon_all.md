@@ -1154,7 +1154,6 @@ console.log(inputs);
 ## 심화 1
 
 <blockquote>
-<br>
 
 <br>
 
@@ -1410,6 +1409,81 @@ for (let [a, b, c] of input) {
 }
 
 console.log((t / s).toFixed(6));
+```
+
+</blockquote>
+
+<br>
+<br>
+
+## 2차원 배열
+
+<blockquote>
+
+<br>
+
+### 행렬 덧셈
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/fef66827-ab0f-4195-b73f-7489ec116ea6)
+
+```javascript
+let [n, ...lists] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((v) => +v));
+
+const [y, x] = n;
+let answer = "";
+
+for (let i = 0; i < lists.length / 2; i++) {
+  for (let j = 0; j < x; j++) {
+    answer += `${String(lists[i][j] + lists[y + i][j])} `;
+  }
+  answer += "\n";
+}
+
+console.log(answer.trim());
+```
+
+<br>
+
+### 최댓값
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/b2c74b7d-7721-45ee-adcb-140c332605c1)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5ef4a663-9575-4d26-ba0e-5149e91e6ace)
+
+```javascript
+let input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((x) =>
+    x
+      .trim()
+      .split(" ")
+      .map((x) => +x)
+  );
+
+let max = 0;
+let coordinate = "";
+for (let i = 0; i < 9; i++) {
+  for (let j = 0; j < 9; j++) {
+    if (max <= input[i][j]) {
+      max = input[i][j];
+      coordinate = `${i + 1} ${j + 1}`;
+    }
+  }
+}
+
+console.log(max);
+console.log(coordinate);
 ```
 
 </blockquote>
