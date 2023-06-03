@@ -1486,4 +1486,69 @@ console.log(max);
 console.log(coordinate);
 ```
 
+<br>
+
+### 새로읽기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/354b996e-e6d2-4cf6-90f4-8e982630b7a4)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8c20861b-92fe-476d-a56b-7f8e4fb2b92a)
+
+```javascript
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(""));
+
+const maxLength = Math.max(...input.map((i) => i.length));
+
+let answer = "";
+for (let i = 0; i < maxLength; i++) {
+  for (let j = 0; j < input.length; j++) {
+    answer += input[j][i] ? input[j][i] : "";
+  }
+}
+
+console.log(answer);
+```
+
+<br>
+
+### 색종이
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/81bd18f5-7d96-420a-9d41-f4c2639d27f0)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/1eee8523-e0b0-4037-9906-c4c47d5fc11a)
+
+```javascript
+const [n, ...lists] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+const arr = Array.from(Array(100), () => Array(100).fill(0));
+let answer = 0;
+
+for (let i = 0; i < n; i++) {
+  const [startX, startY] = lists[i];
+  for (let w = 0; w < 10; w++) {
+    for (let h = 0; h < 10; h++) {
+      if (arr[startX + w][startY + h] !== 0) {
+        continue;
+      } else {
+        arr[startX + w][startY + h] = 1;
+        answer++;
+      }
+    }
+  }
+}
+console.log(answer);
+```
+
 </blockquote>
