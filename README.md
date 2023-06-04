@@ -31,6 +31,10 @@
 > ### [5. 문자열](./baekjoon/step5/step5_all.md)
 >
 > ### [6. 심화1](./baekjoon/step6/step6_all.md)
+>
+> ### [7. 2차원 배열](./baekjoon/step7/step7_all.md)
+>
+> ### [8. 일반 수학1](./baekjoon/step8/step8_all.md)
 
 <br>
 <hr />

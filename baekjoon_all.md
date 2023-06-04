@@ -1552,3 +1552,87 @@ console.log(answer);
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 일반 수학 1
+
+<blockquote>
+
+<br>
+
+### 진법 변환 1
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/0dc374ae-629b-46aa-be8b-27a963dde860)
+
+```javascript
+const [N, B] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ");
+
+console.log(parseInt(N, B));
+```
+
+<br>
+
+### 진법 변환 2
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/38c23be8-2768-48e6-92d5-9eb1e16fa752)
+
+```javascript
+const [N, B] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
+
+console.log(N.toString(B).toUpperCase());
+```
+
+<br>
+
+### 중앙 이동 알고리즘
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/893d1472-31b0-4336-847f-02d50f79d88d)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/97987087-52fd-4fdf-9f49-6a178750f035)
+
+```javascript
+const N = +require("fs").readFileSync("/dev/stdin").toString().trim();
+console.log(Math.pow(Math.pow(2, N) + 1, 2)); // 정답 1
+// console.log((2 ** N + 1) ** 2); 정답 2
+```
+
+<br>
+
+### 벌집
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/9e58759b-5c2f-42af-9f88-bfbd78da6776)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/955dbf08-5fee-4f4e-ba7d-36cb87b6b145)
+
+```javascript
+const N = +require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let range = 1;
+let block = 1;
+
+while (block < N) {
+  block += 6 * range;
+  range++;
+}
+
+console.log(range);
+```
+
+</blockquote>

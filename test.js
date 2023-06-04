@@ -1,24 +1,11 @@
-const [n, ...lists] = require("fs")
-  .readFileSync("./baekjoon_input.txt")
-  .toString()
-  .trim()
-  .split("\n")
-  .map((v) => v.split(" ").map((t) => +t));
+const N = +require("fs").readFileSync("./baekjoon_input.txt").toString().trim();
 
-const arr = Array.from(Array(100), () => Array(100).fill(0));
-let answer = 0;
+let range = 1;
+let block = 1;
 
-for (let i = 0; i < n; i++) {
-  const [startX, startY] = lists[i];
-  for (let w = 0; w < 10; w++) {
-    for (let h = 0; h < 10; h++) {
-      if (arr[startX + w][startY + h] !== 0) {
-        continue;
-      } else {
-        arr[startX + w][startY + h] = 1;
-        answer++;
-      }
-    }
-  }
+while (block < N) {
+  block += 6 * range;
+  range++;
 }
-console.log(answer);
+
+console.log(range);
