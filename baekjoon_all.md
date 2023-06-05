@@ -1635,4 +1635,86 @@ while (block < N) {
 console.log(range);
 ```
 
+<br>
+
+### 분수찾기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/1e1e7fe0-088c-46c8-9f5c-4b7046ebff44)
+
+```javascript
+let N = +require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let groupCounter = 0;
+
+while (N > 0) {
+  groupCounter++;
+  N -= groupCounter;
+}
+
+const arr = [];
+for (let i = 1; i <= groupCounter; i++) {
+  arr.push(i);
+}
+
+if (groupCounter % 2 == 0) {
+  console.log(
+    `${arr[N + groupCounter - 1]}/${arr.reverse()[N + groupCounter - 1]}`
+  );
+} else {
+  console.log(
+    `${arr.reverse()[N + groupCounter - 1]}/${
+      arr.reverse()[N + groupCounter - 1]
+    }`
+  );
+}
+```
+
+### 정리
+
+```
+이 문제의 핵심은 입력 받은 값 N이 어느 그룹에 속하는지를 구하는게 핵심이다.
+어느 그룹에 속하는지 알게되면, 그 그룹 count 값이 짝수인지 홀수인지이 따라서 출력해주면 된다.
+```
+
+<br>
+
+### 달팽이는 올라가고 싶다
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/f4a99ad3-001c-4a99-aea4-aadb304721d9)
+
+```javascript
+const [A, B, V] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
+
+console.log(Math.ceil((V - B) / (A - B)));
+```
+
+<br>
+
+### 큰 수 A+B
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/49596520-0e1d-41da-9001-2f3bcecda56d)
+
+```javascript
+const [A, B] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => v);
+
+const answer = BigInt(A) + BigInt(B);
+console.log(answer.toString());
+```
+
 </blockquote>
