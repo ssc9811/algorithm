@@ -1718,3 +1718,43 @@ console.log(answer.toString());
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 약수, 배수와 소수
+
+<blockquote>
+
+<br>
+
+### 배수와 약수
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/d9d480ff-45d9-4301-a672-d32275c067eb)
+
+```javascript
+const lists = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+// 0 제거
+lists.pop();
+
+lists.map((list) => {
+  const [A, B] = list;
+  if (A % B === 0) {
+    console.log("multiple");
+  } else if (B % A === 0) {
+    console.log("factor");
+  } else {
+    console.log("neither");
+  }
+});
+```
+
+</blockquote>
