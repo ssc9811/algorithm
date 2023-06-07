@@ -1757,4 +1757,103 @@ lists.map((list) => {
 });
 ```
 
+<br>
+
+### 약수 구하기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/af902470-befe-4f34-8709-1061ee7d2ed2)
+
+```javascript
+const [N, K] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
+
+let count = 0;
+let answer = 0;
+
+for (let i = 1; i <= N; i++) {
+  if (N % i === 0) {
+    count++;
+  }
+  if (count === K) {
+    answer = i;
+    break;
+  }
+}
+
+console.log(answer !== 0 ? answer : 0);
+```
+
+<br>
+
+### 약수들의 합
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/08246ee2-c5f3-483c-b589-e67682746fba)
+
+```javascript
+const [...N] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+N.pop();
+
+N.forEach((item) => {
+  let answer = [];
+  for (let i = 1; i < item; i++) {
+    if (item % i === 0) {
+      answer.push(i);
+    }
+  }
+  if (item === answer.reduce((acc, cur) => (acc += cur))) {
+    console.log(`${item} = ${answer.join(" + ")}`);
+  } else {
+    console.log(`${item} is NOT perfect.`);
+  }
+});
+```
+
+<br>
+
+### 소수 찾기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/7676dc14-6788-4e08-9fdc-45e88faa355a)
+
+```javascript
+const [[N], [...primes]] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+let answer = 0;
+function isPrime(num) {
+  for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  answer += 1;
+}
+
+for (let prime of primes) {
+  if (prime !== 1) {
+    isPrime(prime);
+  }
+}
+console.log(answer);
+```
+
 </blockquote>
