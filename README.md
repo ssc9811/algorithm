@@ -35,6 +35,10 @@
 > ### [7. 2차원 배열](./baekjoon/step7/step7_all.md)
 >
 > ### [8. 일반 수학1](./baekjoon/step8/step8_all.md)
+>
+> ### [9. 약수, 배수와 소수](./baekjoon/step9/step9_all.md)
+>
+> ### [10. 기하: 직사각형과 삼각형](./baekjoon/step10/step10_all.md)
 
 <br>
 <hr />
