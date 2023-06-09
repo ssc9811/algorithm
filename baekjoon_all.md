@@ -1896,3 +1896,78 @@ if (primes.length) {
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 기하: 직사각형과 삼각형
+
+<blockquote>
+
+<br>
+
+### 직사각형
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/82e390e4-faf5-4fda-a80b-a3dc55de4cdb)
+
+```javascript
+const [W, H] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+console.log(W * H);
+```
+
+<br>
+
+### 직사각형에서 탈출
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/3e99eb30-d3c2-4faa-bd82-36975dda8845)
+
+```javascript
+const [x, y, w, h] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
+
+const array = [x, w - x, y, h - y];
+console.log(Math.min(...array));
+```
+
+<br>
+
+### 네 번째 점
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/16c6e29b-d7c7-4f57-ae71-2256282e3a4e)
+
+```javascript
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+let x = 0;
+let y = 0;
+
+for (let i of input) {
+  const [a, b] = i;
+  x ^= a;
+  y ^= b;
+}
+console.log(x, y);
+```
+
+</blockquote>

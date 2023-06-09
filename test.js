@@ -1,9 +1,16 @@
-const [x, y, w, h] = require("fs")
+const input = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
-  .split(" ")
-  .map((v) => +v);
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
 
-const array = [x, w - x, y, h - y];
-console.log(Math.min(...array));
+let x = 0;
+let y = 0;
+
+for (let i of input) {
+  const [a, b] = i;
+  x ^= a;
+  y ^= b;
+}
+console.log(x, y);
