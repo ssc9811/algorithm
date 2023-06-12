@@ -1970,4 +1970,109 @@ for (let i of input) {
 console.log(x, y);
 ```
 
+<br>
+
+### 수학은 체육과목 입니다
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/46ffd745-48fa-42ae-860b-60de4d430807)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/081a07a3-1f80-4bac-8148-7734f91da914)
+
+```javascript
+const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+console.log(input * 4);
+```
+
+<br>
+
+### 대지
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/97e5ff01-d0e1-4ccd-a742-0e19d07d399d)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/c7542f21-10dc-4b37-81c6-2c3fdc390626)
+
+```javascript
+const [[N], ...dots] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+const xArray = [];
+const yArray = [];
+
+dots.forEach((dot) => {
+  const [x, y] = dot;
+  xArray.push(x);
+  yArray.push(y);
+});
+
+const xMax = Math.max(...xArray);
+const xMin = Math.min(...xArray);
+const yMax = Math.max(...yArray);
+const yMin = Math.min(...yArray);
+
+console.log((xMax - xMin) * (yMax - yMin));
+```
+
+<br>
+
+### 삼각형 외우기
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/6137e447-17b9-401d-aa99-f32ee5cb516a)
+
+```javascript
+const [A, B, C] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => +v);
+
+if (A + B + C === 180) {
+  if (A === 60 && (B === 60) & (C === 60)) {
+    console.log("Equilateral");
+  } else if (A === B || B === C || A === C) {
+    console.log("Isosceles");
+  } else {
+    console.log("Scalene");
+  }
+} else {
+  console.log("Error");
+}
+```
+
+<br>
+
+### 세 막대
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/fcb9aa7a-55df-4284-9723-c7092ba9a156)
+
+```javascript
+let [A, B, C] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((t) => +t)
+  .sort((a, b) => a - b);
+
+while (true) {
+  if (A + B > C) {
+    console.log(A + B + C);
+    break;
+  } else {
+    C = A + B - 1;
+  }
+}
+```
+
 </blockquote>

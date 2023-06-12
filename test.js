@@ -1,6 +1,16 @@
-const input = require("fs")
+let [A, B, C] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
-  .trim();
+  .trim()
+  .split(" ")
+  .map((t) => +t)
+  .sort((a, b) => a - b);
 
-console.log(input * 4);
+while (true) {
+  if (A + B > C) {
+    console.log(A + B + C);
+    break;
+  } else {
+    C = A + B - 1;
+  }
+}
