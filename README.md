@@ -41,6 +41,8 @@
 > ### [10. 기하: 직사각형과 삼각형](./baekjoon/step10/step10_all.md)
 >
 > ### [11. 시간 복잡도](./baekjoon/step11/step11_all.md)
+>
+> ### [12. 브루트 포스](./baekjoon/step12/step12_all.md)
 
 <br>
 <hr />
