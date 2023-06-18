@@ -2383,4 +2383,74 @@ nums.sort((a, b) => b - a);
 console.log(nums[k - 1]);
 ```
 
+<br>
+
+### 수 정렬하기 2
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8ddf7050-c780-4529-93fc-79ed68220702)
+
+```javascript
+let [n, ...nums] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => +t);
+
+nums.sort((a, b) => a - b);
+
+console.log(nums.join("\n"));
+```
+
+<br>
+
+### 소트인사이드
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/9a015be2-cb39-41cc-b707-721b676c72bd)
+
+```javascript
+let nums = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("")
+  .map((t) => +t);
+
+console.log(nums.sort((a, b) => b - a).join(""));
+```
+
+<br>
+
+### 좌표 정렬하기 1
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/f01cc15d-5c94-4797-bd92-73fa44574b7c)
+
+```javascript
+let [[N], ...nums] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => +x));
+
+let answer = "";
+
+nums
+  .sort((a, b) => {
+    if (a[0] === b[0]) return a[1] - b[1];
+    else return a[0] - b[0];
+  })
+  .forEach((num) => {
+    answer += `${num[0]} ${num[1]} \n`;
+  });
+
+console.log(answer.trim());
+```
+
 </blockquote>
