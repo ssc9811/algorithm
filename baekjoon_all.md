@@ -2050,6 +2050,45 @@ if (A + B + C === 180) {
 
 <br>
 
+### 삼각형과 세 변
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5ba10a15-731b-434f-9ede-49b308d19acb)
+
+```javascript
+const [...lengths] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) =>
+    v
+      .split(" ")
+      .map((t) => +t)
+      .sort((a, b) => a - b)
+  );
+
+lengths.pop();
+
+for (let length of lengths) {
+  const [A, B, C] = length;
+  if (A + B > C) {
+    if (A === B && B === C && A === C) {
+      console.log("Equilateral");
+    } else if (A === B || B === C || A === C) {
+      console.log("Isosceles");
+    } else {
+      console.log("Scalene");
+    }
+  } else {
+    console.log("Invalid");
+  }
+}
+```
+
+<br>
+
 ### 세 막대
 
 <br>
@@ -2073,6 +2112,275 @@ while (true) {
     C = A + B - 1;
   }
 }
+```
+
+</blockquote>
+
+<br>
+<br>
+
+## 시간 복잡도
+
+<blockquote>
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 1
+
+<br>
+
+<img width="1029" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/344b7a20-4ede-4c0b-aa16-908469fad76e">
+
+```javascript
+console.log(1);
+console.log(0);
+```
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 2
+
+<br>
+
+<img width="1033" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/2ef8e6ac-a620-4a41-80da-93b1504716c8">
+
+```javascript
+let n = require("fs").readFileSync("/dev/stdin").toString().trim();
+console.log(`${n}\n1`);
+```
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 3
+
+<br>
+
+<img width="1030" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/63cd867f-16ae-4bb2-883e-648b471323a3">
+
+```javascript
+let n = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+console.log(`${n * n}\n2`);
+```
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 4
+
+<br>
+
+<img width="1039" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/a2c24e63-05fb-4dc0-81e9-f9bba3ff13c0">
+
+```javascript
+let n = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let sum = 0;
+
+while (n > 0) {
+  n--;
+  sum += +n;
+}
+console.log(`${sum}\n2`);
+```
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 5
+
+<br>
+
+<img width="1033" alt="image" src="https://github.com/ssc9811/algorithm/assets/39263149/e8845b21-464f-4e83-840e-69dda6d32b48">
+
+```javascript
+let n = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let num = BigInt(n);
+console.log(`${num * num * num}\n3`);
+```
+
+<br>
+
+### 알고리즘 수업 - 알고리즘의 수행 시간 6
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/e0ed65b7-a5bf-4f9a-8007-e1874a0cc895)
+
+```javascript
+let n = require("fs").readFileSync("/dev/stdin").toString().trim();
+let num = BigInt(n);
+
+console.log(`${(num * (num - BigInt(1)) * (num - BigInt(2))) / BigInt(6)}`);
+console.log(3);
+```
+
+</blockquote>
+
+<br>
+<br>
+
+## 브루트 포스
+
+<blockquote>
+
+<br>
+
+### 블랙잭
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/1ea4fe02-a745-42c8-b32b-7dcd1ba22d09)
+
+```javascript
+let [[N, M], [...cards]] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((v) => v.split(" ").map((t) => +t));
+
+let max = 0;
+
+for (let i = 0; i < N - 2; i++) {
+  for (let j = i + 1; j < N - 1; j++) {
+    for (let t = j + 1; t < N; t++) {
+      let sum = cards[i] + cards[j] + cards[t];
+      if (sum > max && sum <= M) {
+        max = sum;
+      }
+    }
+  }
+}
+console.log(max);
+```
+
+<br>
+
+### 분해합
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/55ecd537-f794-4b6f-8143-c7640a516993)
+
+```javascript
+let N = require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let answer = 0;
+let Num = N;
+
+while (Num >= 1) {
+  let divSum = String(Num)
+    .split("")
+    .reduce((acc, cur) => (acc += +cur), 0);
+  let sum = divSum + +Num;
+  if (sum === +N) {
+    answer = Num;
+  }
+  Num--;
+}
+
+console.log(answer);
+```
+
+<br>
+
+### 수학은 비대면강의입니다
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/4cafcb54-8f42-4f34-a4aa-cff5b5bbf24f)
+
+```javascript
+let [a, b, c, d, e, f] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((t) => +t);
+
+for (let i = -999; i <= 999; i++) {
+  for (let j = -999; j <= 999; j++) {
+    if (a * i + b * j == c && d * i + e * j == f) {
+      console.log(i, j);
+      break;
+    }
+  }
+}
+```
+
+</blockquote>
+
+<br>
+<br>
+
+## 정렬
+
+<blockquote>
+
+<br>
+
+### 수 정렬하기 1
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/c3f23de3-3339-4c61-af34-f39bb0216086)
+
+```javascript
+let [n, ...nums] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => +t);
+
+nums.sort((a, b) => a - b);
+
+for (let num of nums) {
+  console.log(num);
+}
+```
+
+<br>
+
+### 대표값2
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/f4badb6c-f6b9-443f-96f7-80b5b3d754c8)
+
+```javascript
+let [...nums] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => +t);
+
+nums.sort((a, b) => a - b);
+
+console.log(nums.reduce((acc, cur) => (acc += cur)) / nums.length);
+console.log(nums[Math.floor(nums.length / 2)]);
+```
+
+<br>
+
+### 커트라인
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/d3eb14db-1c5b-41ba-b0ce-d6bc518e52df)
+
+```javascript
+let [[N, k], [...nums]] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => +x));
+
+nums.sort((a, b) => b - a);
+
+console.log(nums[k - 1]);
 ```
 
 </blockquote>

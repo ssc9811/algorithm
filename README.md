@@ -43,6 +43,8 @@
 > ### [11. 시간 복잡도](./baekjoon/step11/step11_all.md)
 >
 > ### [12. 브루트 포스](./baekjoon/step12/step12_all.md)
+>
+> ### [13. 정렬](./baekjoon/step13/step13_all.md)
 
 <br>
 <hr />
