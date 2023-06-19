@@ -1,29 +1,24 @@
-// const fs = require("fs");
-// const input = fs
-//   .readFileSync("./baekjoon_input.txt")
-//   .toString()
-//   .trim()
-//   .split("\n");
-
-// const N = Number(input.shift());
-// const xy = input.filter((v, i) => i >= 0).map((v) => v.split(" "));
-
-let [[N], ...nums] = require("fs")
+let [[N], ...words] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
-  .split("\n")
-  .map((t) => t.split(" ").map((x) => +x));
+  .split("\n");
 
-let answer = "";
+const arr = [];
+for (let word of words) {
+  arr.push(word);
+}
 
-nums
-  .sort((a, b) => {
-    if (a[0] === b[0]) return a[1] - b[1];
-    else return a[0] - b[0];
-  })
-  .forEach((num) => {
-    answer += `${num[0]} ${num[1]} \n`;
-  });
+const newArray = [...new Set(arr)];
 
-console.log(answer.trim());
+const arr2 = [];
+for (let word of newArray) {
+  arr2.push([word.length, word]);
+}
+
+arr2.sort((a, b) => {
+  if (a[0] !== b[0]) return a[0] - b[0];
+  else return a[1] - b[1];
+});
+
+console.log("arr2", arr2);
