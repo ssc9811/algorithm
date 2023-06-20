@@ -2214,6 +2214,25 @@ console.log(`${(num * (num - BigInt(1)) * (num - BigInt(2))) / BigInt(6)}`);
 console.log(3);
 ```
 
+<br>
+
+### 알고리즘 수업 - 점근적 표기 1
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/5a325802-4bfd-4aed-8d66-bdd9f74c338c)
+
+```javascript
+let [[...f], [c], [n0]] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => +x));
+
+f[0] * n0 + f[1] <= c * n0 && f[0] <= c ? console.log(1) : console.log(0);
+```
+
 </blockquote>
 
 <br>
