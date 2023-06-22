@@ -1,18 +1,16 @@
-const inputs = require("fs")
+const [nums, ...words] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
   .split("\n");
 
-let N = inputs[0];
-let N_cards = new Set(inputs[1].split(" "));
-let M = inputs[2];
-let M_cards = inputs[3].split(" ");
+let answer = 0;
+const [n, m] = nums.split(" ").map((t) => +t);
 
-const answer = [];
+const firstWord = new Set(words.slice(0, n));
 
-for (let M_card of M_cards) {
-  N_cards.has(M_card) ? answer.push(1) : answer.push(0);
+for (lastWord of words.slice(-m)) {
+  firstWord.has(lastWord) && answer++;
 }
 
-console.log(answer.join(" "));
+console.log(answer);

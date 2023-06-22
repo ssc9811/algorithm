@@ -2473,3 +2473,68 @@ console.log(answer.trim());
 ```
 
 </blockquote>
+
+<br>
+<br>
+
+## 집합과 맵
+
+<blockquote>
+
+<br>
+
+### 숫자 카드
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/6dc29f68-adea-4878-8b3d-d67620f6f216)
+
+```javascript
+const inputs = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+let N = inputs[0];
+let N_cards = new Set(inputs[1].split(" "));
+let M = inputs[2];
+let M_cards = inputs[3].split(" ");
+
+const answer = [];
+
+for (let M_card of M_cards) {
+  N_cards.has(M_card) ? answer.push(1) : answer.push(0);
+}
+
+console.log(answer.join(" "));
+```
+
+<br>
+
+### 문자열 집합
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/58ec05d0-8155-47af-bf46-2205195545b8)
+
+```javascript
+const [nums, ...words] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+let answer = 0;
+const [n, m] = nums.split(" ").map((t) => +t);
+
+const firstWord = new Set(words.slice(0, n));
+
+for (lastWord of words.slice(-m)) {
+  firstWord.has(lastWord) && answer++;
+}
+
+console.log(answer);
+```
+
+</blockquote>
