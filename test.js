@@ -4,13 +4,9 @@ const [nums, ...words] = require("fs")
   .trim()
   .split("\n");
 
-let answer = 0;
-const [n, m] = nums.split(" ").map((t) => +t);
+words.sort((a, b) => {
+  return a.length - b.length || a.localeCompare(b);
+});
 
-const firstWord = new Set(words.slice(0, n));
-
-for (lastWord of words.slice(-m)) {
-  firstWord.has(lastWord) && answer++;
-}
-
-console.log(answer);
+const set = new Set(words);
+console.log(Array.from(set).join("\n"));
