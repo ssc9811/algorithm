@@ -1,12 +1,11 @@
-const [nums, ...words] = require("fs")
-  .readFileSync("./baekjoon_input.txt")
-  .toString()
-  .trim()
-  .split("\n");
+let num = +require("fs").readFileSync("./baekjoon_input.txt").toString().trim();
+let title = 665;
 
-words.sort((a, b) => {
-  return a.length - b.length || a.localeCompare(b);
-});
+while (num > 0) {
+  title++;
+  if (String(title).includes("666")) {
+    num--;
+  }
+}
 
-const set = new Set(words);
-console.log(Array.from(set).join("\n"));
+console.log(title);

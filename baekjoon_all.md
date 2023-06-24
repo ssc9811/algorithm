@@ -2327,6 +2327,55 @@ for (let i = -999; i <= 999; i++) {
 }
 ```
 
+<br>
+
+### 영화감독 숌
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/0126ab80-7b61-42e1-979c-b55afa1b951e)
+
+```javascript
+let num = +require("fs").readFileSync("/dev/stdin").toString().trim();
+let title = 665;
+
+while (num > 0) {
+  title++;
+  if (String(title).includes("666")) {
+    num--;
+  }
+}
+
+console.log(title);
+```
+
+<br>
+
+### 설탕 배달
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/c91a8b7f-670c-490a-becd-608664b22b62)
+
+```javascript
+let kg = +require("fs").readFileSync("/dev/stdin").toString().trim();
+
+let count = 0;
+
+while (true) {
+  if (kg % 5 === 0) {
+    console.log(kg / 5 + count);
+    break;
+  }
+  if (0 > kg) {
+    console.log(-1);
+    break;
+  }
+  count++;
+  kg -= 3;
+}
+```
+
 </blockquote>
 
 <br>
