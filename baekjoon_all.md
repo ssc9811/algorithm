@@ -2521,6 +2521,110 @@ nums
 console.log(answer.trim());
 ```
 
+<br>
+
+### 좌표 정렬하기 2
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/62928d13-a8a3-4d59-a5ad-61de7d4d7534)
+
+```javascript
+let [[N], ...nums] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => +x));
+
+let answer = "";
+
+nums
+  .sort((a, b) => {
+    if (a[1] !== b[1]) return a[1] - b[1];
+    return a[0] - b[0];
+  })
+  .forEach((num) => {
+    answer += `${num[0]} ${num[1]} \n`;
+  });
+
+console.log(answer.trim());
+```
+
+<br>
+
+### 단어 정렬
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/cca07783-f7ad-4619-a10f-0d6b77af2904)
+
+```javascript
+const [nums, ...words] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+words.sort((a, b) => {
+  return a.length - b.length || a.localeCompare(b);
+});
+
+const set = new Set(words);
+console.log(Array.from(set).join("\n"));
+```
+
+<br>
+
+### 나이순 정렬
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/8a9dd4fe-d0b1-4806-a0ed-42300a23d1eb)
+
+```javascript
+const [[n], ...members] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" "));
+
+members.sort((a, b) => {
+  return a[0] - b[0];
+});
+
+members.map((t) => console.log(t.join(" ")));
+```
+
+```javascript
+const [[n], ...members] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+members.sort((a, b) => {
+  return a.split(" ")[0] - b.split(" ")[0];
+});
+
+console.log(members.join("\n"));
+```
+
+```javascript
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+const len = input.shift();
+
+input.sort((a, b) => parseFloat(a) - parseFloat(b));
+
+console.log(input.join("\n"));
+```
+
 </blockquote>
 
 <br>

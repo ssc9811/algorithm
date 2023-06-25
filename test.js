@@ -1,11 +1,11 @@
-let num = +require("fs").readFileSync("./baekjoon_input.txt").toString().trim();
-let title = 665;
+const [[n], ...members] = require("fs")
+  .readFileSync("./baekjoon_input.txt")
+  .toString()
+  .trim()
+  .split("\n");
 
-while (num > 0) {
-  title++;
-  if (String(title).includes("666")) {
-    num--;
-  }
-}
+members.sort((a, b) => {
+  return a.split(" ")[0] - b.split(" ")[0];
+});
 
-console.log(title);
+console.log(members.join("\n"));
