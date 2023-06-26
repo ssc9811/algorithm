@@ -2625,6 +2625,70 @@ input.sort((a, b) => parseFloat(a) - parseFloat(b));
 console.log(input.join("\n"));
 ```
 
+<br>
+
+### 좌표 압축
+
+<br>
+
+```javascript
+const [n, dots] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x, i) => [i, x]));
+
+let min = 0;
+let count = 0;
+
+const sorted = dots.sort((a, b) => a[1] - b[1]);
+
+const newArray = sorted.map((item, index) => {
+  if (index === 0) {
+    min = item[1];
+  }
+  if (item[1] === min) {
+    return [item[0], count];
+  } else {
+    count++;
+    min = item[1];
+    return [item[0], count];
+  }
+});
+
+console.log(
+  newArray
+    .sort((a, b) => a[0] - b[0])
+    .map((item) => item[1])
+    .join(" ")
+);
+```
+
+```javascript
+const [n, dots] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => x));
+
+const set = new Set(dots);
+const uniq = [...set].sort((a, b) => a - b);
+
+let dic = {};
+uniq.forEach((e, i) => {
+  dic[e] = i;
+});
+
+let answer = "";
+for (let i = 0; i < dots.length; i++) {
+  answer += dic[dots[i]] + " ";
+}
+
+console.log(answer);
+```
+
 </blockquote>
 
 <br>
