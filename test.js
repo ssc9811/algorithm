@@ -1,17 +1,19 @@
-const [[n], ...dots] = require("fs")
+const [[n], ...nums] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
   .split("\n")
   .map((t) => t.split(" ").map((x) => x));
 
-let company = new Map(dots.map((el) => [el[0], el[1]]));
-const result = [];
+const [a1, a2] = nums;
 
-for (let key of company.keys()) {
-  if (company.get(key) !== "leave") result.push(key);
-}
+const setA1 = new Set([...a1]);
+const setA2 = new Set([...a2]);
 
-result.sort().reverse();
+const set = new Set([...a1.concat(a2)]);
 
-console.log(result.join(" "));
+setA1.forEach((item) => {
+  if (setA2.has(item)) set.delete(item);
+});
+
+console.log(set.size);
