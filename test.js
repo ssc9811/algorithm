@@ -1,19 +1,28 @@
-const [[n], ...nums] = require("fs")
+let [[n, m], ...blocks] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
   .split("\n")
   .map((t) => t.split(" ").map((x) => x));
 
-const [a1, a2] = nums;
+blocks = blocks.map((str) => str.join("").split(""));
+const answer = [];
+const line = ["WBWBWBWB", "BWBWBWBW"];
 
-const setA1 = new Set([...a1]);
-const setA2 = new Set([...a2]);
+for (let x = 0; x <= n - 8; x++) {
+  for (let y = 0; y <= m - 8; y++) {
+    for (let z = 0; z < 2; z++) {
+      let count = 0;
 
-const set = new Set([...a1.concat(a2)]);
+      for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+          const current = blocks[x + i][j + y];
+          if (current !== line[(i + z) % 2][j]) count++;
+        }
+      }
+      answer.push(count);
+    }
+  }
+}
 
-setA1.forEach((item) => {
-  if (setA2.has(item)) set.delete(item);
-});
-
-console.log(set.size);
+console.log(Math.min(...answer));
