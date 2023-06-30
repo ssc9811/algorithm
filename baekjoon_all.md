@@ -2793,4 +2793,70 @@ for (lastWord of words.slice(-m)) {
 console.log(answer);
 ```
 
+<br>
+
+### 회사에 있는 사람
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/d3c897d4-4433-44bc-aa52-f0c472a20f4e)
+
+```javascript
+const [[n], ...dots] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map((x) => x));
+
+let company = new Map(dots.map((el) => [el[0], el[1]]));
+const result = [];
+
+for (let key of company.keys()) {
+  if (company.get(key) !== "leave") result.push(key);
+}
+
+result.sort().reverse();
+
+console.log(result.join(" "));
+```
+
+<br>
+
+### 나는야 포켓몬 마스터 이다솜
+
+<br>
+
+![image](https://github.com/ssc9811/algorithm/assets/39263149/4fe9d89a-5a18-4787-8687-4149c600f5dc)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/d3cc636c-ef5b-4ede-9b7e-63ef606faa0f)
+![image](https://github.com/ssc9811/algorithm/assets/39263149/258dce7d-e5e5-4722-bfaf-a4996033b5ea)
+
+```javascript
+let [[n, m], ...lists] = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" "));
+
+const pokemonToNum = new Map();
+lists = lists.map((list) => list.join());
+const option = lists.slice(n, lists.length);
+for (let i = 0; i < n; i++) {
+  pokemonToNum.set(lists[i], i + 1);
+}
+
+let answer = "";
+
+option.forEach((item) => {
+  if (isNaN(+item)) {
+    answer += `${pokemonToNum.get(item)}\n`;
+  } else {
+    answer += `${lists[item - 1]}\n`;
+  }
+});
+
+console.log(answer.trim());
+```
+
 </blockquote>

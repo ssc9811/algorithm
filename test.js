@@ -1,28 +1,25 @@
-let [[n, m], ...blocks] = require("fs")
+let [[n, m], ...lists] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
   .split("\n")
-  .map((t) => t.split(" ").map((x) => x));
+  .map((t) => t.split(" "));
 
-blocks = blocks.map((str) => str.join("").split(""));
-const answer = [];
-const line = ["WBWBWBWB", "BWBWBWBW"];
-
-for (let x = 0; x <= n - 8; x++) {
-  for (let y = 0; y <= m - 8; y++) {
-    for (let z = 0; z < 2; z++) {
-      let count = 0;
-
-      for (let i = 0; i < 8; i++) {
-        for (let j = 0; j < 8; j++) {
-          const current = blocks[x + i][j + y];
-          if (current !== line[(i + z) % 2][j]) count++;
-        }
-      }
-      answer.push(count);
-    }
-  }
+const pokemonToNum = new Map();
+lists = lists.map((list) => list.join());
+const option = lists.slice(n, lists.length);
+for (let i = 0; i < n; i++) {
+  pokemonToNum.set(lists[i], i + 1);
 }
 
-console.log(Math.min(...answer));
+let answer = "";
+
+option.forEach((item) => {
+  if (isNaN(+item)) {
+    answer += `${pokemonToNum.get(item)}\n`;
+  } else {
+    answer += `${lists[item - 1]}\n`;
+  }
+});
+
+console.log(answer.trim());
