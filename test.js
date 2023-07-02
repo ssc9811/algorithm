@@ -1,25 +1,16 @@
-let [[n, m], ...lists] = require("fs")
+let inputs = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
-  .split("\n")
-  .map((t) => t.split(" "));
+  .split("\n");
 
-const pokemonToNum = new Map();
-lists = lists.map((list) => list.join());
-const option = lists.slice(n, lists.length);
-for (let i = 0; i < n; i++) {
-  pokemonToNum.set(lists[i], i + 1);
+const N = +inputs[0];
+const NCards = new Set(inputs[1].split(" "));
+const M = +inputs[2];
+const MCards = inputs[3].split(" ");
+
+for (let MCard of MCards) {
+  let count = 0;
+  NCards.has(MCard) && count++;
+  console.log(count);
 }
-
-let answer = "";
-
-option.forEach((item) => {
-  if (isNaN(+item)) {
-    answer += `${pokemonToNum.get(item)}\n`;
-  } else {
-    answer += `${lists[item - 1]}\n`;
-  }
-});
-
-console.log(answer.trim());
