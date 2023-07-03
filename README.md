@@ -12,11 +12,11 @@
 - 배열의 고차 함수를 적극적으로 사용하며, 메모리의 사용을 최소화
 - 문제 설명과 제한 조건이 기록된 이미지 파일을 첨부하고, 코드 또한 README.md 파일에 분류하여 기록
 
-> ### [23/07/03 ~ ing]
+> ### [23/07/02 ~ ing]
 >
 > ## [알고리즘 기초 1](https://code.plus/course/41)
 >
-> ### [알고리즘 기초 1 전체 문제]()
+> ### [알고리즘 기초 1 전체 문제](./baekjoon/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%88%201/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%881%20all.md)
 >
 > <br>
 
@@ -24,37 +24,37 @@
 >
 > ## [백준 단계별로 풀어보기](https://www.acmicpc.net/step)
 >
-> ### [단계별로 풀어보기 전체 문제](./baekjoon_all.md)
+> ### [단계별로 풀어보기 전체 문제](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/baekjoon_all.md)
 >
 > <br>
 >
-> ### [1. 입출력과 사칙연산](./baekjoon/step1/step1_all.md)
+> ### [1. 입출력과 사칙연산](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step1/step1_all.md)
 >
-> ### [2. 조건문](./baekjoon/step2/step2_all.md)
+> ### [2. 조건문](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step2/step2_all.md)
 >
-> ### [3. 반복문](./baekjoon/step3/step3_all.md)
+> ### [3. 반복문](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step3/step3_all.md)
 >
-> ### [4. 1차원 배열](./baekjoon/step4/step4_all.md)
+> ### [4. 1차원 배열](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step4/step4_all.md)
 >
-> ### [5. 문자열](./baekjoon/step5/step5_all.md)
+> ### [5. 문자열](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step5/step5_all.md)
 >
-> ### [6. 심화1](./baekjoon/step6/step6_all.md)
+> ### [6. 심화1](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step6/step6_all.md)
 >
-> ### [7. 2차원 배열](./baekjoon/step7/step7_all.md)
+> ### [7. 2차원 배열](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step7/step7_all.md)
 >
-> ### [8. 일반 수학1](./baekjoon/step8/step8_all.md)
+> ### [8. 일반 수학1](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step8/step8_all.md)
 >
-> ### [9. 약수, 배수와 소수](./baekjoon/step9/step9_all.md)
+> ### [9. 약수, 배수와 소수](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step9/step9_all.md)
 >
-> ### [10. 기하: 직사각형과 삼각형](./baekjoon/step10/step10_all.md)
+> ### [10. 기하: 직사각형과 삼각형](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step10/step10_all.md)
 >
-> ### [11. 시간 복잡도](./baekjoon/step11/step11_all.md)
+> ### [11. 시간 복잡도](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step11/step11_all.md)
 >
-> ### [12. 브루트 포스](./baekjoon/step12/step12_all.md)
+> ### [12. 브루트 포스](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step12/step12_all.md)
 >
-> ### [13. 정렬](./baekjoon/step13/step13_all.md)
+> ### [13. 정렬](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step13/step13_all.md)
 >
-> ### [14. 집합과 맵](./baekjoon/step14/step14_all.md)
+> ### [14. 집합과 맵](./baekjoon/%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C%20%ED%92%80%EC%96%B4%EB%B3%B4%EA%B8%B0/step14/step14_all.md)
 
 <br>
 <hr />
