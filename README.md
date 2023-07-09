@@ -16,7 +16,9 @@
 >
 > ## [알고리즘 기초 1](https://code.plus/course/41)
 >
-> ### [알고리즘 기초 1 전체 문제](./baekjoon/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%88%201/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%881%20all.md)
+> ### [알고리즘 기초 1 전체 문제](./baekjoon/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%88%201/basic1_all.md)
+>
+> ### [200 - 자료구조 1](./baekjoon/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%88%201/200%20-%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%201/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B8%B0%EC%B4%881%20all.md)
 >
 > <br>
 
