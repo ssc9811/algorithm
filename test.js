@@ -1,26 +1,19 @@
-let [[n], ...[list]] = require("fs")
-  .readFileSync("./baekjoon_input.txt")
-  .toString()
-  .trim()
-  .split("\n")
-  .map((t) => t.split(" "));
+let word = require("fs").readFileSync("./baekjoon_input.txt").toString().trim();
 
-console.log(n, list);
+const alphabets = Array.from({ length: 26 }).map((_, i) =>
+  String.fromCharCode(i + 97)
+);
 
-const answer = [];
+let answer = "";
+for (let alphabet of alphabets) {
+  let search = alphabet;
+  let count = 0;
+  let idx = word.indexOf(search);
 
-for (let i = 0; i < n; i++) {
-  let num = list.reverse().pop();
-  while (true) {
-    let j = i + 1;
-    let next = list[j];
-    if (+num > next) {
-      answer.push(-1);
-    } else {
-      answer.push(max);
-    }
-    j++;
+  while (idx != -1) {
+    count++;
+    idx = word.indexOf(search, idx + 1);
   }
+  answer += `${count} `;
 }
-
 console.log(answer);
