@@ -1,23 +1,26 @@
-let input = require("fs")
+let [[n], ...[list]] = require("fs")
   .readFileSync("./baekjoon_input.txt")
   .toString()
   .trim()
-  .split("");
+  .split("\n")
+  .map((t) => t.split(" "));
 
-// 스택 활용해서 풀이
-let sticks = [];
-let answer = 0;
+console.log(n, list);
 
-for (let i = 0; i < input.length; i++) {
-  const string = input[i];
-  if (string === "(" && input[i + 1] === ")") {
-    answer += sticks.length;
-    i += 1;
-  } else if (string === "(") {
-    sticks.push("(");
-  } else if (string === ")") {
-    sticks.pop();
-    answer += 1;
+const answer = [];
+
+for (let i = 0; i < n; i++) {
+  let num = list.reverse().pop();
+  while (true) {
+    let j = i + 1;
+    let next = list[j];
+    if (+num > next) {
+      answer.push(-1);
+    } else {
+      answer.push(max);
+    }
+    j++;
   }
 }
+
 console.log(answer);
