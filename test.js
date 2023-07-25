@@ -1,20 +1,22 @@
-let [[n], ...nums] = require("fs")
+let [[n], [...primes]] = require("fs")
   .readFileSync("./test_input.txt")
   .toString()
   .trim()
   .split("\n")
   .map((t) => t.split(" ").map((x) => +x));
 
-const gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
-const lcm = (a, b) => (a * b) / gcd(a, b);
-
-for (num of nums) {
-  const [A, B] = num;
-  console.log(lcm(A, B));
+let answer = 0;
+function isPrime(num) {
+  if (num === 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  answer += 1;
 }
-
-// const gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
-// const lcm = (a, b) => (a * b) / gcd(a, b);
-
-// console.log(gcd(O, T));
-// console.log(lcm(O, T));
+for (let prime of primes) {
+  isPrime(prime);
+}
