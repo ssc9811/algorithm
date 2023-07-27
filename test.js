@@ -1,26 +1,14 @@
-let [M, N] = require("fs")
-  .readFileSync("./test_input.txt")
-  .toString()
-  .trim()
-  .split(" ")
-  .map((t) => +t);
+let N = +require("fs").readFileSync("./test_input.txt").toString().trim();
 
-const isPrime = (n) => {
-  if (n === 1) {
-    return false;
+function Factorial(input) {
+  let answer = 0;
+  if (input === 0) answer;
+  for (let i = 1; i <= input; i++) {
+    if (i % 5 === 0) answer++;
+    if (i % 25 === 0) answer++;
+    if (i % 125 === 0) answer++;
   }
-  for (let i = 2; i <= Math.floor(Math.sqrt(n)); i++) {
-    if (n % i === 0) {
-      return false;
-    }
-  }
-  answer += `${n}\n`;
-};
-
-let answer = "";
-
-for (let i = M; i <= N; i++) {
-  isPrime(i);
+  return answer;
 }
 
-console.log(answer.trim());
+console.log(Factorial(N));
