@@ -1,5 +1,8 @@
-let defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
-let search = { ...defaults, food: "rich" };
+const [N, B] = require("fs")
+  .readFileSync("./test_input.txt")
+  .toString()
+  .trim()
+  .split(" ")
+  .map((v) => +v);
 
-console.log(defaults);
-console.log(search);
+console.log(N.toString(B).toUpperCase());
