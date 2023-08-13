@@ -2,7 +2,6 @@ const [N, B] = require("fs")
   .readFileSync("./test_input.txt")
   .toString()
   .trim()
-  .split(" ")
-  .map((v) => +v);
+  .split(" ");
 
-console.log(N.toString(B).toUpperCase());
+console.log(parseInt(N, B));
