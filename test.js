@@ -1,7 +1,11 @@
-const [N, B] = require("fs")
-  .readFileSync("./test_input.txt")
-  .toString()
-  .trim()
-  .split(" ");
+let N = +require("fs").readFileSync("./test_input.txt").toString().trim();
 
-console.log(parseInt(N, B));
+let num = 2;
+while (N > 1) {
+  if (N % num === 0) {
+    N /= num;
+    console.log(num);
+  } else {
+    num++;
+  }
+}
